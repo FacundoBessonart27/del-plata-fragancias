@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     
     let lastScrollTop = 0;
-    let scrollThreshold = 100; // Píxeles antes de activar hide/show
+    let scrollThreshold = 100; 
     
     
     // ===== HIDE ON SCROLL DOWN, SHOW ON SCROLL UP =====
@@ -44,6 +44,31 @@ document.addEventListener('DOMContentLoaded', function() {
         const overlay = document.createElement('div');
         overlay.classList.add('navbar-overlay');
         document.body.appendChild(overlay);
+        // Crear menú móvil unificado
+        const mobileMenu = document.createElement('div');
+        mobileMenu.classList.add('mobile-menu');
+        
+        // Crear lista unificada de navegación
+        const mobileNavList = document.createElement('ul');
+        mobileNavList.classList.add('mobile-nav-list');
+        
+        // Obtener todos los links de ambos menús
+        const leftLinks = navbarMenuLeft.querySelectorAll('.navbar-item');
+        const rightLinks = navbarMenuRight.querySelectorAll('.navbar-item');
+        // Agregar links del menú izquierdo
+        leftLinks.forEach(item => {
+            const clonedItem = item.cloneNode(true);
+            mobileNavList.appendChild(clonedItem);
+        });
+        
+        // Agregar links del menú derecho
+        rightLinks.forEach(item => {
+            const clonedItem = item.cloneNode(true);
+            mobileNavList.appendChild(clonedItem);
+        });
+        
+        mobileMenu.appendChild(mobileNavList);
+        document.body.appendChild(mobileMenu);
         
         // Toggle del menú
         navbarToggle.addEventListener('click', function() {
@@ -62,39 +87,34 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.addEventListener('click', function() {
             closeMenu();
         });
-        
-        // Cerrar menú al hacer click en un link
-        const navLinks = document.querySelectorAll('.navbar-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    closeMenu();
-                }
-            });
+         // Cerrar menú al hacer click en un link
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target.classList.contains('navbar-link')) {
+                closeMenu();
+            }
         });
-        
         // Funciones para abrir/cerrar menú
         function openMenu() {
             navbarToggle.classList.add('active');
-            navbarMenuLeft.classList.add('active');
-            navbarMenuRight.classList.add('active');
+            mobileMenu.classList.add('active');
             overlay.classList.add('active');
-            body.style.overflow = 'hidden'; // Bloquear scroll del body
+            body.style.overflow = 'hidden';
         }
         
         function closeMenu() {
             navbarToggle.classList.remove('active');
-            navbarMenuLeft.classList.remove('active');
-            navbarMenuRight.classList.remove('active');
+            mobileMenu.classList.remove('active');
             overlay.classList.remove('active');
-            body.style.overflow = ''; // Restaurar scroll del body
+            body.style.overflow = '';
         }
         
-        // Cerrar menú al cambiar tamaño de ventana (si se pasa a desktop)
+        // Cerrar menú al cambiar tamaño de ventana
         window.addEventListener('resize', function() {
             if (window.innerWidth > 768) {
                 closeMenu();
             }
         });
     }
+    
 });
+    

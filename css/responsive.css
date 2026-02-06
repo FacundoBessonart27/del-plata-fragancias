@@ -651,6 +651,7 @@
         transition: left var(--transition-slow);
         z-index: var(--z-index-modal);
         padding: var(--spacing-3xl) var(--spacing-xl);
+        display: none;
     }
     
     /* Menú abierto */
@@ -759,6 +760,95 @@
     }
 }
 
+
+/* ===== MENÚ MÓVIL UNIFICADO ===== */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    z-index: var(--z-index-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left var(--transition-slow);
+    overflow-y: auto;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-nav-list {
+    list-style: none;
+    padding: var(--spacing-3xl) var(--spacing-xl);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    width: 100%;
+    max-width: 400px;
+}
+
+.mobile-menu .navbar-item {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.mobile-menu.active .navbar-item:nth-child(1) { animation-delay: 0.1s; }
+.mobile-menu.active .navbar-item:nth-child(2) { animation-delay: 0.15s; }
+.mobile-menu.active .navbar-item:nth-child(3) { animation-delay: 0.2s; }
+.mobile-menu.active .navbar-item:nth-child(4) { animation-delay: 0.25s; }
+.mobile-menu.active .navbar-item:nth-child(5) { animation-delay: 0.3s; }
+.mobile-menu.active .navbar-item:nth-child(6) { animation-delay: 0.35s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-menu .navbar-link {
+    display: block;
+    font-size: var(--font-size-xl);
+    color: var(--color-text-primary);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-border-medium);
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-base);
+}
+
+.mobile-menu .navbar-link:hover,
+.mobile-menu .navbar-link-active {
+    background-color: var(--color-primary);
+    color: var(--color-bg-dark);
+    border-color: var(--color-primary);
+    transform: scale(1.02);
+}
+
+.mobile-menu .navbar-link::after {
+    display: none;
+}
+
+.mobile-menu .navbar-link-account {
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.mobile-menu .navbar-link-account:hover {
+    background-color: var(--color-primary);
+    color: var(--color-bg-dark);
+}
+
+
 /* ===== OVERLAY PARA MENÚ MÓVIL ===== */
 .navbar-overlay {
     display: none;
@@ -767,7 +857,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
     z-index: calc(var(--z-index-modal) - 1);
     opacity: 0;
     transition: opacity var(--transition-base);

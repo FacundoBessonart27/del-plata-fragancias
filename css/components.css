@@ -407,6 +407,7 @@
     letter-spacing: var(--letter-spacing-wider);
 }
 
+
 /* ===== Hero Section ===== */
 
 /* ===== HERO TITLE ===== */
@@ -465,7 +466,7 @@
     }
 }
 
-/* ===== BOTÓN PRIMARY (Si no lo tienes ya) ===== */
+/* ===== BOTÓN PRIMARY  ===== */
 
 .btn {
     display: inline-block;
@@ -494,6 +495,8 @@
     box-shadow: var(--shadow-gold);
     transform: translateY(-2px);
 }
+
+
 /* ===== NAVIGATION LINKS ===== */
 
 .navbar-link {
