@@ -26,59 +26,7 @@ Panel de administración (productos, pedidos, clientes)
 
 Diseño responsive para dispositivos móviles
 
-🗂️ Estructura del proyecto
-del-plata-fragancias/
-│
-├── index.html
-├── catalogo.html
-├── perfume-detalle.html
-├── recomendador.html
-├── historias.html
-├── carrito.html
-├── checkout.html
-├── login.html
-├── registro.html
-├── cuenta.html
-├── contacto.html
-├── sobre-nosotros.html
-│
-├── admin/
-│   ├── admin-login.html
-│   ├── admin-dashboard.html
-│   ├── admin-perfumes.html
-│   ├── admin-pedidos.html
-│   └── admin-clientes.html
-│
-├── assets/
-│   ├── images/
-│   ├── icons/
-│   └── videos/
-│
-├── css/
-│   ├── main.css
-│   ├── variables.css
-│   ├── layout.css
-│   ├── components.css
-│   ├── home.css
-│   ├── perfumes.css
-│   ├── admin.css
-│   └── responsive.css
-│
-├── js/
-│   ├── main.js
-│   ├── menu.js
-│   ├── filtros.js
-│   ├── carrito.js
-│   ├── recomendador.js
-│   ├── auth.js
-│   └── admin.js
-│
-├── data/
-│   ├── perfumes.json
-│   ├── categorias.json
-│   └── usuarios.json
-│
-└── README.md
+
 🎨 Diseño
 
 El diseño está inspirado en marcas de perfumería de alta gama, utilizando:
