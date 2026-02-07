@@ -629,7 +629,7 @@
 /* ===== TABLET PEQUEÑA (768px) ===== */
 @media (max-width: 768px) {
     .navbar-container {
-        grid-template-columns: auto 1fr auto;
+        grid-template-columns: 50px 1fr 50px;
         padding: var(--spacing-sm) var(--spacing-md);
         gap: var(--spacing-md);
     }
@@ -640,10 +640,21 @@
         display: none;
     }
     
-    /* Logo ajustado */
+    /* Hamburguesa a la izquierda - columna 1 */
+    .navbar-toggle {
+        display: flex;
+        grid-column: 1;
+        grid-row: 1;
+        align-self: center;
+        justify-self: start;
+    }
+    
+    /* Logo centrado - columna 2 */
     .navbar-brand {
         grid-column: 2;
+        grid-row: 1;
         justify-self: center;
+        align-self: center;
     }
     
     .brand-title {
@@ -654,17 +665,13 @@
         font-size: 0.6rem;
     }
     
-    /* Mostrar botón hamburguesa */
-    .navbar-toggle {
-        display: flex;
-        grid-column: 1;
-    }
-    
-    /* Carrito visible en móvil */
+    /* Carrito a la derecha - columna 3 */
     .navbar-cart {
         display: flex;
         grid-column: 3;
+        grid-row: 1;
         justify-self: end;
+        align-self: center;
     }
     
     .cart-link {
