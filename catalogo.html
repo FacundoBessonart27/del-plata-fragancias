@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo completo de fragancias Del Plata - Perfumes exclusivos para hombres y mujeres. Descubre nuestra colección premium.">
+    <meta name="keywords" content="catálogo perfumes, fragancias hombre, fragancias mujer, perfumería premium, Del Plata">
+    <meta name="author" content="Del Plata Fragancias">
+    <title>Catalogo de Fragancias || Del Plata Fragancias</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/iconoDPF.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header Principal -->
+    <header class="header-main">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <!-- Navegación Izquierda -->
+                <ul class="navbar-menu navbar-menu-left">
+                    <li class="navbar-item">
+                        <a href="index.html" class="navbar-link">Inicio</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="catalogo.html" class="navbar-link navbar-link-active">Catálogo</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="guias.html" class="navbar-link">Guías</a>
+                    </li>
+                </ul>
+
+                <!-- Logo Central -->
+                <div class="navbar-brand">
+                    <a href="index.html" class="brand-link">
+                        <h1 class="brand-title">DEL PLATA</h1>
+                        <h2 class="brand-subtitle">FRAGANCIAS</h2>
+                    </a>
+                </div>
+
+                <!-- Navegación Derecha -->
+                <ul class="navbar-menu navbar-menu-right">
+                    <li class="navbar-item">
+                        <a href="contacto.html" class="navbar-link">Contacto</a>
+                    </li>
+                    <li class="navbar-item navbar-item-account">
+                        <a href="login.html" class="navbar-link navbar-link-account">Mi Cuenta</a>
+                    </li>
+                </ul>
+
+                <!-- Ícono del carrito (FUERA de la lista) -->
+                <div class="navbar-cart">
+                    <a href="carrito.html" class="cart-link">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+
+                <!-- Menú móvil -->
+                <button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+
+        <!-- Sección Introducción del Catálogo -->
+        <section class="catalog-intro-section">
+            <div class="container">
+                <div class="catalog-intro-content">
+                    <h2 class="page-title">Catálogo de Fragancias</h2>
+                    <p class="page-description">
+                        Explora nuestra colección completa de perfumes premium para hombres y mujeres. 
+                        Cada fragancia ha sido cuidadosamente seleccionada para ofrecerte lo mejor en elegancia y distinción.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Filtros y Productos -->
+        <section class="catalog-main-section">
+            <div class="container">
+                <div class="catalog-layout">
+
+                    <!-- Sidebar de Filtros -->
+                    <aside class="catalog-sidebar">
+                        <div class="filters-container">
+                            <h3 class="filters-title">Filtrar por</h3>
+
+                            <form class="filters-form" id="catalogFilters">
+                                
+                                <!-- Filtro por Categoría -->
+                                <fieldset class="filter-group">
+                                    <legend class="filter-group-title">Categoría</legend>
+                                    <div class="filter-options">
+                                        <label class="filter-option">
+                                            <input type="checkbox" name="category" value="hombre" class="filter-checkbox">
+                                            <span class="filter-label">Hombre</span>
+                                        </label>
+                                        <label class="filter-option">
+                                            <input type="checkbox" name="category" value="mujer" class="filter-checkbox">
+                                            <span class="filter-label">Mujer</span>
+                                        </label>
+                                        <label class="filter-option">
+                                            <input type="checkbox" name="category" value="unisex" class="filter-checkbox">
+                                            <span class="filter-label">Unisex</span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                                <!-- Filtro por Tipo de Concentración -->
+                                <fieldset class="filter-group">
+                                    <legend class="filter-group-title">Tipo de Concentración</legend>
+                                    <div class="filter-options">
+                                        <label class="filter-option">
+                                            <input type="checkbox" name="type" value="edt" class="filter-checkbox">
+                                            <span class="filter-label">EDT (Eau de Toilette)</span>
+                                        </label>
+                                        <label class="filter-option">
+                                            <input type="checkbox" name="type" value="edp" class="filter-checkbox">
+                                            <span class="filter-label">EDP (Eau de Parfum)</span>
+                                        </label>
+                                        <label class="filter-option">
+                                            <input type="checkbox" name="type" value="parfum" class="filter-checkbox">
+                                            <span class="filter-label">Parfum</span>
+                                        </label>
+                                        <label class="filter-option">
+                                            <input type="checkbox" name="type" value="elixir" class="filter-checkbox">
+                                            <span class="filter-label">Elixir</span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                                <!-- Filtro por Marca -->
+                                <fieldset class="filter-group">
+                                    <legend class="filter-group-title">Marca</legend>
+                                    <div class="filter-options">
+                                        <select name="brand" id="brandFilter" class="filter-select">
+                                            <option value="">Todas las marcas</option>
+                                            <option value="ysl">Yves Saint Laurent</option>
+                                            <option value="dior">Dior</option>
+                                            <option value="chanel">Chanel</option>
+                                            <option value="versace">Versace</option>
+                                            <option value="paco-rabanne">Paco Rabanne</option>
+                                            <option value="carolina-herrera">Carolina Herrera</option>
+                                            <option value="lacoste">Lacoste</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+
+                                <!-- Filtro por Precio -->
+                                <fieldset class="filter-group">
+                                    <legend class="filter-group-title">Rango de Precio</legend>
+                                    <div class="filter-options">
+                                        <label class="filter-option">
+                                            <input type="radio" name="price" value="0-50" class="filter-radio">
+                                            <span class="filter-label">Menos de $50</span>
+                                        </label>
+                                        <label class="filter-option">
+                                            <input type="radio" name="price" value="50-100" class="filter-radio">
+                                            <span class="filter-label">$50 - $100</span>
+                                        </label>
+                                        <label class="filter-option">
+                                            <input type="radio" name="price" value="100-150" class="filter-radio">
+                                            <span class="filter-label">$100 - $150</span>
+                                        </label>
+                                        <label class="filter-option">
+                                            <input type="radio" name="price" value="150+" class="filter-radio">
+                                            <span class="filter-label">Más de $150</span>
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                                <!-- Botones de Acción -->
+                                <div class="filter-actions">
+                                    <button type="submit" class="btn btn-primary btn-filter-apply">Aplicar Filtros</button>
+                                    <button type="reset" class="btn btn-secondary btn-filter-reset">Limpiar</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </aside>
+
+                    <!-- Grid de Productos -->
+                    <div class="catalog-products">
+                        
+                        <!-- Barra de Ordenamiento -->
+                        <div class="catalog-toolbar">
+                            <p class="catalog-results-count">Mostrando <strong>12</strong> fragancias</p>
+                            <div class="catalog-sort">
+                                <label for="sortBy" class="sort-label">Ordenar por:</label>
+                                <select name="sort" id="sortBy" class="sort-select">
+                                    <option value="relevance">Relevancia</option>
+                                    <option value="price-asc">Precio: menor a mayor</option>
+                                    <option value="price-desc">Precio: mayor a menor</option>
+                                    <option value="name-asc">Nombre: A-Z</option>
+                                    <option value="name-desc">Nombre: Z-A</option>
+                                    <option value="newest">Más recientes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Grid de Productos -->
+                        <div class="products-grid products-grid-catalog">
+
+                            <!-- Producto 1 -->
+                            <article class="product-card">
+                                <a href="perfume-detalle.html?id=black-opium" class="product-card-link">
+                                    <div class="product-image-container">
+                                        <img src="assets/img/products/black-opium.jpg" alt="Yves Saint Laurent Black Opium" class="product-image">
+                                        <span class="product-badge product-badge-new">Nuevo</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="product-category">Para Ella</p>
+                                        <h3 class="product-name">Yves Saint Laurent Black Opium EDP</h3>
+                                        <p class="product-tagline">Intensa · Seductora · Adictiva</p>
+                                        <div class="product-footer">
+                                            <span class="product-price">$145</span>
+                                            <span class="product-cta">Ver detalle</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Producto 2 -->
+                            <article class="product-card">
+                                <a href="perfume-detalle.html?id=sauvage" class="product-card-link">
+                                    <div class="product-image-container">
+                                        <img src="assets/img/products/sauvage.jpg" alt="Dior Sauvage" class="product-image">
+                                        <span class="product-badge product-badge-popular">Popular</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="product-category">Para Él</p>
+                                        <h3 class="product-name">Dior Sauvage EDT</h3>
+                                        <p class="product-tagline">Fresco · Intenso · Noble</p>
+                                        <div class="product-footer">
+                                            <span class="product-price">$135</span>
+                                            <span class="product-cta">Ver detalle</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Producto 3 -->
+                            <article class="product-card">
+                                <a href="perfume-detalle.html?id=coco-mademoiselle" class="product-card-link">
+                                    <div class="product-image-container">
+                                        <img src="assets/img/products/coco-mademoiselle.jpg" alt="Chanel Coco Mademoiselle" class="product-image">
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="product-category">Para Ella</p>
+                                        <h3 class="product-name">Chanel Coco Mademoiselle EDP</h3>
+                                        <p class="product-tagline">Elegante · Fresca · Sensual</p>
+                                        <div class="product-footer">
+                                            <span class="product-price">$165</span>
+                                            <span class="product-cta">Ver detalle</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Producto 4 -->
+                            <article class="product-card">
+                                <a href="perfume-detalle.html?id=one-million" class="product-card-link">
+                                    <div class="product-image-container">
+                                        <img src="assets/img/products/one-million.jpg" alt="Paco Rabanne 1 Million" class="product-image">
+                                        <span class="product-badge product-badge-exclusive">Exclusivo</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="product-category">Para Él</p>
+                                        <h3 class="product-name">Paco Rabanne 1 Million EDT</h3>
+                                        <p class="product-tagline">Audaz · Dulce · Provocador</p>
+                                        <div class="product-footer">
+                                            <span class="product-price">$125</span>
+                                            <span class="product-cta">Ver detalle</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Producto 5 -->
+                            <article class="product-card">
+                                <a href="perfume-detalle.html?id=good-girl" class="product-card-link">
+                                    <div class="product-image-container">
+                                        <img src="assets/img/products/good-girl.jpg" alt="Carolina Herrera Good Girl" class="product-image">
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="product-category">Para Ella</p>
+                                        <h3 class="product-name">Carolina Herrera Good Girl EDP</h3>
+                                        <p class="product-tagline">Misteriosa · Glamorosa · Única</p>
+                                        <div class="product-footer">
+                                            <span class="product-price">$140</span>
+                                            <span class="product-cta">Ver detalle</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Producto 6 -->
+                            <article class="product-card">
+                                <a href="perfume-detalle.html?id=lacoste-blanc" class="product-card-link">
+                                    <div class="product-image-container">
+                                        <img src="assets/img/products/lacoste-blanc.jpg" alt="Lacoste L.12.12 Blanc" class="product-image">
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="product-category">Para Él</p>
+                                        <h3 class="product-name">Lacoste L.12.12 Blanc EDT</h3>
+                                        <p class="product-tagline">Fresco · Elegante · Versátil</p>
+                                        <div class="product-footer">
+                                            <span class="product-price">$95</span>
+                                            <span class="product-cta">Ver detalle</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Producto 7 -->
+                            <article class="product-card">
+                                <a href="perfume-detalle.html?id=versace-eros" class="product-card-link">
+                                    <div class="product-image-container">
+                                        <img src="assets/img/products/versace-eros.jpg" alt="Versace Eros" class="product-image">
+                                        <span class="product-badge product-badge-popular">Popular</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="product-category">Para Él</p>
+                                        <h3 class="product-name">Versace Eros EDT</h3>
+                                        <p class="product-tagline">Potente · Vibrante · Apasionado</p>
+                                        <div class="product-footer">
+                                            <span class="product-price">$130</span>
+                                            <span class="product-cta">Ver detalle</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Producto 8 -->
+                            <article class="product-card">
+                                <a href="perfume-detalle.html?id=si-passione" class="product-card-link">
+                                    <div class="product-image-container">
+                                        <img src="assets/img/products/si-passione.jpg" alt="Giorgio Armani Sì Passione" class="product-image">
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="product-category">Para Ella</p>
+                                        <h3 class="product-name">Giorgio Armani Sì Passione EDP</h3>
+                                        <p class="product-tagline">Radiante · Femenina · Vibrante</p>
+                                        <div class="product-footer">
+                                            <span class="product-price">$155</span>
+                                            <span class="product-cta">Ver detalle</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Producto 9 -->
+                            <article class="product-card">
+                                <a href="perfume-detalle.html?id=bleu-de-chanel" class="product-card-link">
+                                    <div class="product-image-container">
+                                        <img src="assets/img/products/bleu-chanel.jpg" alt="Bleu de Chanel" class="product-image">
+                                        <span class="product-badge product-badge-new">Nuevo</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="product-category">Para Él</p>
+                                        <h3 class="product-name">Bleu de Chanel EDP</h3>
+                                        <p class="product-tagline">Sofisticado · Aromático · Atemporal</p>
+                                        <div class="product-footer">
+                                            <span class="product-price">$160</span>
+                                            <span class="product-cta">Ver detalle</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Producto 10 -->
+                            <article class="product-card">
+                                <a href="perfume-detalle.html?id=la-vie-est-belle" class="product-card-link">
+                                    <div class="product-image-container">
+                                        <img src="assets/img/products/la-vie-est-belle.jpg" alt="Lancôme La Vie Est Belle" class="product-image">
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="product-category">Para Ella</p>
+                                        <h3 class="product-name">Lancôme La Vie Est Belle EDP</h3>
+                                        <p class="product-tagline">Dulce · Floral · Gourmand</p>
+                                        <div class="product-footer">
+                                            <span class="product-price">$150</span>
+                                            <span class="product-cta">Ver detalle</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Producto 11 -->
+                            <article class="product-card">
+                                <a href="perfume-detalle.html?id=invictus" class="product-card-link">
+                                    <div class="product-image-container">
+                                        <img src="assets/img/products/invictus.jpg" alt="Paco Rabanne Invictus" class="product-image">
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="product-category">Para Él</p>
+                                        <h3 class="product-name">Paco Rabanne Invictus EDT</h3>
+                                        <p class="product-tagline">Deportivo · Fresco · Triunfante</p>
+                                        <div class="product-footer">
+                                            <span class="product-price">$118</span>
+                                            <span class="product-cta">Ver detalle</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <!-- Producto 12 -->
+                            <article class="product-card">
+                                <a href="perfume-detalle.html?id=miss-dior" class="product-card-link">
+                                    <div class="product-image-container">
+                                        <img src="assets/img/products/miss-dior.jpg" alt="Miss Dior" class="product-image">
+                                        <span class="product-badge product-badge-exclusive">Exclusivo</span>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="product-category">Para Ella</p>
+                                        <h3 class="product-name">Miss Dior EDP</h3>
+                                        <p class="product-tagline">Romántica · Floral · Cautivadora</p>
+                                        <div class="product-footer">
+                                            <span class="product-price">$158</span>
+                                            <span class="product-cta">Ver detalle</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </article>
+
+                        </div>
+
+                        <!-- Paginación -->
+                        <nav class="catalog-pagination" aria-label="Paginación del catálogo">
+                            <ul class="pagination-list">
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link pagination-prev" aria-label="Página anterior">
+                                        ← Anterior
+                                    </a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link pagination-active" aria-current="page">1</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link">2</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link">3</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <span class="pagination-dots">...</span>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link">10</a>
+                                </li>
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-link pagination-next" aria-label="Página siguiente">
+                                        Siguiente →
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-container">            
+            <!-- Columna 1: Enlaces rápidos -->
+            <div class="footer-column footer-column-links">
+                <h4 class="footer-column-title">Del Plata Fragancias</h4>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="nosotros.html" class="footer-link">Nosotros</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="catalogo.html" class="footer-link">Catálogo</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="contacto.html" class="footer-link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna 2: Atención al cliente -->
+            <div class="footer-column footer-column-customer">
+                <h4 class="footer-column-title">Atención al Cliente</h4>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="preguntas-frecuentes.html" class="footer-link">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="envios-devoluciones.html" class="footer-link">Envíos y Devoluciones</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="politica-privacidad.html" class="footer-link">Política de Privacidad</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Redes Sociales -->
+            <div class="footer-column footer-column-about">
+                <h4 class="footer-column-title">Síguenos</h4>
+                <div class="footer-social">
+                    <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/facebook.png" alt="Icono de Facebook"></span>
+                    </a>
+                    <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/instagram.png" alt="Icono de Instagram"></span>
+                    </a>
+                    <a href="https://twitter.com" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/TwitterIcono.png" alt="Icono de Twitter"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna 4: Suscripción Newsletter -->
+            <div class="footer-column footer-column-subscribe">
+                <h4 class="footer-column-title">Suscríbete</h4>
+                <p class="footer-text footer-text-small">
+                    Recibe nuestras novedades
+                </p>
+                <form class="footer-newsletter-form" id="newsletterForm" action="#" method="post">
+                    <div class="form-group">
+                        <input type="email" id="newsletterEmail" name="email" class="form-input footer-input" placeholder="E-mail adress" required aria-label="Correo electrónico para newsletter">
+                        <button type="submit" class="btn btn-primary btn-newsletter-footer">Suscribirme</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="footer-copyright">
+                    &copy; 2025 Del Plata Fragancias. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
