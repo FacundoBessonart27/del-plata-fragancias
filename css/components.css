@@ -328,6 +328,27 @@
     margin: 0;
     letter-spacing: var(--letter-spacing-wide);
 }
+/* ===== PRODUCT FOOTER ===== */
+
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--spacing-sm);
+}
+
+/* ===== PRODUCT PRICE ===== */
+
+.product-price {
+    font-family: var(--font-accent);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-light);
+    font-style: italic;
+    color: var(--color-text-secondary);
+    line-height: 1;
+    margin: 0;
+    letter-spacing: var(--letter-spacing-normal);
+}
 
 /* ===== PRODUCT CTA (Call To Action) ===== */
 
@@ -339,16 +360,18 @@
     color: var(--color-text-secondary);
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-wider);
-    margin-top: var(--spacing-sm);
     position: relative;
-    padding-bottom: 4px;
+    padding-bottom: 0;
     transition: color var(--transition-base);
+    line-height: 1;
+    white-space: nowrap;
+    margin: 0;
 }
 
 .product-cta::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -356,11 +379,13 @@
     transition: all var(--transition-base);
 }
 
-.product-card-highlight:hover .product-cta {
+.product-card-highlight:hover .product-cta,
+.product-card:hover .product-cta {
     color: var(--color-primary);
 }
 
-.product-card-highlight:hover .product-cta::after {
+.product-card-highlight:hover .product-cta::after,
+.product-card:hover .product-cta::after {
     background-color: var(--color-primary);
     height: 2px;
 }
