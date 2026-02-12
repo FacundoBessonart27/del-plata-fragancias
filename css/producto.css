@@ -1,0 +1,168 @@
+/* ===== ANIMACIONES ESPECÍFICAS ===== */
+
+@keyframes productFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-detail-layout {
+    animation: productFadeIn 0.6s ease-out;
+}
+
+/* ===== IMAGEN ZOOM EFFECT ===== */
+
+.gallery-main {
+    cursor: zoom-in;
+}
+
+.gallery-main-image {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* ===== THUMBNAILS HOVER ===== */
+
+.thumbnail-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(201, 160, 92, 0.1);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.thumbnail-item:hover::after {
+    opacity: 1;
+}
+
+.thumbnail-active::after {
+    opacity: 0.2;
+}
+
+/* ===== PRICE HIGHLIGHT ===== */
+
+.product-price-main {
+    text-shadow: 0 0 20px rgba(201, 160, 92, 0.3);
+}
+
+/* ===== NOTES CARDS ===== */
+
+.note-item {
+    position: relative;
+    background: linear-gradient(135deg, rgba(201, 160, 92, 0.05) 0%, transparent 100%);
+    border-radius: var(--border-radius-md);
+    transition: all var(--transition-base);
+}
+
+.note-item:hover {
+    background: linear-gradient(135deg, rgba(201, 160, 92, 0.1) 0%, transparent 100%);
+    transform: translateY(-2px);
+}
+
+.note-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-primary);
+    border-radius: var(--border-radius-sm);
+}
+
+/* ===== SPECS LIST ALTERNATING BACKGROUND ===== */
+
+.spec-item:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding-left: var(--spacing-sm);
+    padding-right: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+}
+
+/* ===== BUTTONS SHINE EFFECT ===== */
+
+.btn-add-to-cart {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-add-to-cart::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-add-to-cart:hover::before {
+    left: 100%;
+}
+
+/* ===== GUARANTEE ITEMS ICON ===== */
+
+.guarantee-item {
+    position: relative;
+    padding-left: var(--spacing-xl);
+}
+
+.guarantee-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* ===== TAB PANELS SCROLL ===== */
+
+.description-content {
+    min-height: 400px;
+}
+
+/* ===== USAGE STEPS CONNECTING LINE ===== */
+
+.usage-steps {
+    position: relative;
+}
+
+.usage-steps::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 48px;
+    bottom: 48px;
+    width: 2px;
+    background: linear-gradient(to bottom, 
+        var(--color-primary) 0%, 
+        rgba(201, 160, 92, 0.3) 50%, 
+        var(--color-primary) 100%
+    );
+}
+
+.usage-step {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== RELATED PRODUCTS TITLE ===== */
+
+.section-title-center::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin: var(--spacing-md) auto 0;
+    border-radius: var(--border-radius-sm);
+}
