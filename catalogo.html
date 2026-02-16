@@ -71,7 +71,7 @@
         </nav>
     </header>
 
-    <!-- Contenido Principal -->
+<!-- Contenido Principal -->
     <main class="main-content">
 
         <!-- Sección Introducción del Catálogo -->
@@ -147,13 +147,15 @@
                                     <div class="filter-options">
                                         <select name="brand" id="brandFilter" class="filter-select">
                                             <option value="">Todas las marcas</option>
-                                            <option value="ysl">Yves Saint Laurent</option>
+                                            <option value="yves-saint-laurent">Yves Saint Laurent</option>
                                             <option value="dior">Dior</option>
                                             <option value="chanel">Chanel</option>
                                             <option value="versace">Versace</option>
                                             <option value="paco-rabanne">Paco Rabanne</option>
                                             <option value="carolina-herrera">Carolina Herrera</option>
                                             <option value="lacoste">Lacoste</option>
+                                            <option value="lancome">Lancôme</option>
+                                            <option value="giorgio-armani">Giorgio Armani</option>
                                         </select>
                                     </div>
                                 </fieldset>
@@ -163,20 +165,20 @@
                                     <legend class="filter-group-title">Rango de Precio</legend>
                                     <div class="filter-options">
                                         <label class="filter-option">
-                                            <input type="radio" name="price" value="0-50" class="filter-radio">
-                                            <span class="filter-label">Menos de $50</span>
+                                            <input type="radio" name="price" value="0-4000" class="filter-radio">
+                                            <span class="filter-label">Menos de $U 4.000</span>
                                         </label>
                                         <label class="filter-option">
-                                            <input type="radio" name="price" value="50-100" class="filter-radio">
-                                            <span class="filter-label">$50 - $100</span>
+                                            <input type="radio" name="price" value="4000-6000" class="filter-radio">
+                                            <span class="filter-label">$U 4.000 - $U 6.000</span>
                                         </label>
                                         <label class="filter-option">
-                                            <input type="radio" name="price" value="100-150" class="filter-radio">
-                                            <span class="filter-label">$100 - $150</span>
+                                            <input type="radio" name="price" value="6000-8000" class="filter-radio">
+                                            <span class="filter-label">$U 6.000 - $U 8.000</span>
                                         </label>
                                         <label class="filter-option">
-                                            <input type="radio" name="price" value="150+" class="filter-radio">
-                                            <span class="filter-label">Más de $150</span>
+                                            <input type="radio" name="price" value="8000+" class="filter-radio">
+                                            <span class="filter-label">Más de $U 8.000</span>
                                         </label>
                                     </div>
                                 </fieldset>
@@ -196,6 +198,7 @@
                         
                         <!-- Barra de Ordenamiento -->
                         <div class="catalog-toolbar">
+                            <p class="catalog-results-count">Mostrando <strong>0</strong> fragancias</p>
                             <div class="catalog-sort">
                                 <label for="sortBy" class="sort-label">Ordenar por:</label>
                                 <select name="sort" id="sortBy" class="sort-select">
@@ -211,229 +214,7 @@
 
                         <!-- Grid de Productos -->
                         <div class="products-grid products-grid-catalog">
-
-                            <!-- Producto 1 -->
-                            <article class="product-card">
-                                <a href="producto.html?id=black-opium" class="product-card-link">
-                                    <div class="product-image-container">
-                                        <img src="assets/img/CatalogoIMG/BlackOpium.jpg" alt="Yves Saint Laurent Black Opium" class="product-image">
-                                        <span class="product-badge product-badge-new">Nuevo</span>
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-category">Para Ella</p>
-                                        <h3 class="product-name">Yves Saint Laurent Black Opium EDP</h3>
-                                        <p class="product-tagline">Intensa · Seductora · Adictiva</p>
-                                        <div class="product-footer">
-                                            <span class="product-price">$U 4145</span>
-                                            <span class="product-cta">Ver detalle</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <!-- Producto 2 -->
-                            <article class="product-card">
-                                <a href="producto.html?id=sauvage" class="product-card-link">
-                                    <div class="product-image-container">
-                                        <img src="assets/img/CatalogoIMG/DiorSauvageEDT.jpg" alt="Dior Sauvage" class="product-image">
-                                        <span class="product-badge product-badge-popular">Popular</span>
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-category">Para Él</p>
-                                        <h3 class="product-name">Dior Sauvage EDT</h3>
-                                        <p class="product-tagline">Fresco · Intenso · Noble</p>
-                                        <div class="product-footer">
-                                            <span class="product-price">$U 3635</span>
-                                            <span class="product-cta">Ver detalle</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <!-- Producto 3 -->
-                            <article class="product-card">
-                                <a href="producto.html?id=coco-mademoiselle" class="product-card-link">
-                                    <div class="product-image-container">
-                                        <img src="assets/img/CatalogoIMG/ChannelCoco.jpg" alt="Chanel Coco Mademoiselle" class="product-image">
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-category">Para Ella</p>
-                                        <h3 class="product-name">Chanel Coco Mademoiselle EDP</h3>
-                                        <p class="product-tagline">Elegante · Fresca · Sensual</p>
-                                        <div class="product-footer">
-                                            <span class="product-price">$U 6465</span>
-                                            <span class="product-cta">Ver detalle</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <!-- Producto 4 -->
-                            <article class="product-card">
-                                <a href="producto.html?id=one-million" class="product-card-link">
-                                    <div class="product-image-container">
-                                        <img src="assets/img/CatalogoIMG/1MillionPacoRabbane.jpg" alt="Paco Rabanne 1 Million" class="product-image">
-                                        <span class="product-badge product-badge-exclusive">Exclusivo</span>
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-category">Para Él</p>
-                                        <h3 class="product-name">Paco Rabanne 1 Million EDT</h3>
-                                        <p class="product-tagline">Audaz · Dulce · Provocador</p>
-                                        <div class="product-footer">
-                                            <span class="product-price">$U 4375</span>
-                                            <span class="product-cta">Ver detalle</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <!-- Producto 5 -->
-                            <article class="product-card">
-                                <a href="producto.html?id=good-girl" class="product-card-link">
-                                    <div class="product-image-container">
-                                        <img src="assets/img/CatalogoIMG/CarolinaHerraraGoodGirl.jpg" alt="Carolina Herrera Good Girl" class="product-image">
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-category">Para Ella</p>
-                                        <h3 class="product-name">Carolina Herrera Good Girl EDP</h3>
-                                        <p class="product-tagline">Misteriosa · Glamorosa · Única</p>
-                                        <div class="product-footer">
-                                            <span class="product-price">$U 9140</span>
-                                            <span class="product-cta">Ver detalle</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <!-- Producto 6 -->
-                            <article class="product-card">
-                                <a href="producto.html?id=lacoste-blanc" class="product-card-link">
-                                    <div class="product-image-container">
-                                        <img src="assets/img/CatalogoIMG/lacosteBlanc.jpg" alt="Lacoste L.12.12 Blanc" class="product-image">
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-category">Para Él</p>
-                                        <h3 class="product-name">Lacoste L.12.12 Blanc EDT</h3>
-                                        <p class="product-tagline">Fresco · Elegante · Versátil</p>
-                                        <div class="product-footer">
-                                            <span class="product-price">$U 3095</span>
-                                            <span class="product-cta">Ver detalle</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <!-- Producto 7 -->
-                            <article class="product-card">
-                                <a href="producto.html?id=versace-eros" class="product-card-link">
-                                    <div class="product-image-container">
-                                        <img src="assets/img/CatalogoIMG/VersaceErosEDT.jpg" alt="Versace Eros" class="product-image">
-                                        <span class="product-badge product-badge-popular">Popular</span>
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-category">Para Él</p>
-                                        <h3 class="product-name">Versace Eros EDT</h3>
-                                        <p class="product-tagline">Potente · Vibrante · Apasionado</p>
-                                        <div class="product-footer">
-                                            <span class="product-price">$U 4530</span>
-                                            <span class="product-cta">Ver detalle</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <!-- Producto 8 -->
-                            <article class="product-card">
-                                <a href="producto.html?id=si-passione" class="product-card-link">
-                                    <div class="product-image-container">
-                                        <img src="assets/img/CatalogoIMG/giorgioArmaniEDP.jpg" alt="Giorgio Armani Sì Passione" class="product-image">
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-category">Para Ella</p>
-                                        <h3 class="product-name">Giorgio Armani Sì Passione EDP</h3>
-                                        <p class="product-tagline">Radiante · Femenina · Vibrante</p>
-                                        <div class="product-footer">
-                                            <span class="product-price">$U 4155</span>
-                                            <span class="product-cta">Ver detalle</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <!-- Producto 9 -->
-                            <article class="product-card">
-                                <a href="producto.html?id=bleu-de-chanel" class="product-card-link">
-                                    <div class="product-image-container">
-                                        <img src="assets/img/CatalogoIMG/channelBleuEDP.jpg" alt="Bleu de Chanel" class="product-image">
-                                        <span class="product-badge product-badge-new">Nuevo</span>
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-category">Para Él</p>
-                                        <h3 class="product-name">Bleu de Chanel EDP</h3>
-                                        <p class="product-tagline">Sofisticado · Aromático · Atemporal</p>
-                                        <div class="product-footer">
-                                            <span class="product-price">$U 7160</span>
-                                            <span class="product-cta">Ver detalle</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <!-- Producto 10 -->
-                            <article class="product-card">
-                                <a href="producto.html?id=la-vie-est-belle" class="product-card-link">
-                                    <div class="product-image-container">
-                                        <img src="assets/img/CatalogoIMG/LancomeLaVie.jpg" alt="Lancôme La Vie Est Belle" class="product-image">
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-category">Para Ella</p>
-                                        <h3 class="product-name">Lancôme La Vie Est Belle EDP</h3>
-                                        <p class="product-tagline">Dulce · Floral · Gourmand</p>
-                                        <div class="product-footer">
-                                            <span class="product-price">$U 6150</span>
-                                            <span class="product-cta">Ver detalle</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <!-- Producto 11 -->
-                            <article class="product-card">
-                                <a href="producto.html?id=invictus" class="product-card-link">
-                                    <div class="product-image-container">
-                                        <img src="assets/img/CatalogoIMG/PagoRabaneInvictusEDT.jpg" alt="Paco Rabanne Invictus" class="product-image">
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-category">Para Él</p>
-                                        <h3 class="product-name">Paco Rabanne Invictus EDT</h3>
-                                        <p class="product-tagline">Deportivo · Fresco · Triunfante</p>
-                                        <div class="product-footer">
-                                            <span class="product-price">$U 4118</span>
-                                            <span class="product-cta">Ver detalle</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </article>
-
-                            <!-- Producto 12 -->
-                            <article class="product-card">
-                                <a href="producto.html?id=miss-dior" class="product-card-link">
-                                    <div class="product-image-container">
-                                        <img src="assets/img/CatalogoIMG/missDiorEDP.jpg" alt="Miss Dior" class="product-image">
-                                        <span class="product-badge product-badge-exclusive">Exclusivo</span>
-                                    </div>
-                                    <div class="product-info">
-                                        <p class="product-category">Para Ella</p>
-                                        <h3 class="product-name">Miss Dior EDP</h3>
-                                        <p class="product-tagline">Romántica · Floral · Cautivadora</p>
-                                        <div class="product-footer">
-                                            <span class="product-price">$U 5580</span>
-                                            <span class="product-cta">Ver detalle</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </article>
-
+                            <!-- Se genera dinámicamente con JavaScript -->
                         </div>
 
                         <!-- Paginación -->
@@ -474,6 +255,7 @@
         </section>
 
     </main>
+
 
     <!-- Footer -->
     <footer class="footer-main">
@@ -550,5 +332,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+        <script src="js/header.js"></script>
+        <script type="module" src="js/pages/CatalogoPage.js"></script>
 </body>
 </html>

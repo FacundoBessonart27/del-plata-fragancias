@@ -70,7 +70,32 @@ export class ProductService {
             p.marca.toLowerCase().includes(lowerQuery)
         );
     }
+
+/**
+ * Ordenar productos
+ */
+sort(productos, sortBy) {
+    const sorted = [...productos];
+
+    switch(sortBy) {
+        case 'price-asc':
+            return sorted.sort((a, b) => a.precio - b.precio);
+        case 'price-desc':
+            return sorted.sort((a, b) => b.precio - a.precio);
+        case 'name-asc':
+            return sorted.sort((a, b) => a.nombre.localeCompare(b.nombre));
+        case 'name-desc':
+            return sorted.sort((a, b) => b.nombre.localeCompare(a.nombre));
+        case 'newest':
+            return sorted.sort((a, b) => (b.nuevo ? 1 : 0) - (a.nuevo ? 1 : 0));
+        default:
+            return sorted;
+    }
 }
+
+}
+
+
 
 // Instancia singleton
 export const productService = new ProductService();

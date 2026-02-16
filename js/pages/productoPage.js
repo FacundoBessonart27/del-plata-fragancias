@@ -1,6 +1,4 @@
-import '../header.js';
-
-import { productService } from '../services/productService.js';
+import { productService } from '../services/ProductService.js';
 import { ProductCard } from '../components/ProductCard.js';
 import { URLParams } from '../utils/urlParams.js';
 import { Currency } from '../utils/currency.js';
@@ -56,6 +54,7 @@ class ProductoPage {
         this.renderProductInfo();
         this.renderNotes();
         this.renderSpecs();
+        this.renderDescripcion();
         this.renderRelatedProducts();
     }
 
@@ -115,8 +114,8 @@ class ProductoPage {
                         data-image="${img}"
                         data-index="${index}">
                     <img src="${img}" 
-                         alt="${this.producto.nombre} - Vista ${index + 1}" 
-                         class="thumbnail-image">
+                        alt="${this.producto.nombre} - Vista ${index + 1}" 
+                        class="thumbnail-image">
                 </button>
             `).join('');
         }
@@ -201,6 +200,22 @@ class ProductoPage {
             </li>
         `).join('');
     }
+
+
+    /**
+ * Renderizar descripción larga en el tab
+ */
+renderDescripcion() {
+    const descripcionEl = document.querySelector('#tab-descripcion .tab-text');
+    if (descripcionEl) {
+        descripcionEl.textContent = this.producto.descripcionLarga;
+    }
+    
+    const tabTitle = document.querySelector('#tab-descripcion .tab-title');
+    if (tabTitle) {
+        tabTitle.textContent = `Sobre ${this.producto.nombre}`;
+    }
+}
 
     /**
      * Renderizar productos relacionados
