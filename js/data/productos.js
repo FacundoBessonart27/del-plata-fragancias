@@ -184,7 +184,7 @@ export const PRODUCTOS = [
             fondo: ['Cedro de Virginia', 'Gamuza', 'Vetiver']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/LacosteBlanc.jpg',
+            principal: 'assets/img/CatalogoIMG/lacosteBlanc.jpg',
             galeria: [
                 'assets/img/CatalogoIMG/lacosteBlanc.jpg',
                 'assets/img/CatalogoIMG/lacosteBlanc2.jpg',
