@@ -186,10 +186,10 @@ export const PRODUCTOS = [
         imagenes: {
             principal: 'assets/img/CatalogoIMG/LacosteBlanc.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/LacosteBlanc.jpg',
-                'assets/img/CatalogoIMG/LacosteBlanc2.jpg',
-                'assets/img/CatalogoIMG/LacosteBlanc3.jpg',
-                'assets/img/CatalogoIMG/LacosteBlanc4.jpg'
+                'assets/img/CatalogoIMG/lacosteBlanc.jpg',
+                'assets/img/CatalogoIMG/lacosteBlanc2.jpg',
+                'assets/img/CatalogoIMG/lacosteBlanc3.jpg',
+                'assets/img/CatalogoIMG/lacosteBlanc4.jpg'
             ]
         },
         stock: 12,
