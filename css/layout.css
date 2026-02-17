@@ -399,6 +399,9 @@
     background-color: var(--color-bg-medium);
     border-right: 1px solid var(--color-border-dark);
 }
+.catalog-sidebar.filters-collapsed .filters-form {
+    display: none;
+}
 
 .filters-container {
     background-color: transparent;

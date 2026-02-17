@@ -29,6 +29,7 @@ class CatalogoPage {
             // Inicializar filtros y ordenamiento
             this.initFilters();
             this.initSort();
+            this.initMobileFilters();
 
             console.log('✅ Catálogo renderizado');
 
@@ -183,6 +184,18 @@ class CatalogoPage {
             `;
         }
     }
+    initMobileFilters() {
+    const toggle = document.getElementById("filtersToggle");
+    const sidebar = document.querySelector(".catalog-sidebar");
+
+    if (!toggle || !sidebar) return;
+
+    toggle.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+            sidebar.classList.toggle("filters-collapsed");
+        }
+    });
+}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
