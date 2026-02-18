@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/catalogo.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/catalogo-responsive.css">
+    <link rel="stylesheet" href="css/cart.css" />
+
 </head>
 <body>
     <!-- Header Principal -->
@@ -53,13 +55,13 @@
                     </li>
                 </ul>
 
-                <!-- Ícono del carrito (FUERA de la lista) -->
+                <!-- Ícono del carrito -->
                 <div class="navbar-cart">
-                    <a href="carrito.html" class="cart-link">
-                        <span class="cart-icon">🛒</span>
-                        <span class="cart-count" id="cartCount">0</span>
-                    </a>
-                </div>
+          <button class="cart-link" aria-label="Abrir carrito de compras">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
 
                 <!-- Menú móvil -->
                 <button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menú de navegación">
@@ -303,7 +305,7 @@
     </footer>
 
     <!-- Scripts -->
-        <script src="js/header.js"></script>
+        <script type="module" src="js/header.js"></script>
         <script type="module" src="js/pages/CatalogoPage.js"></script>
 </body>
 </html>

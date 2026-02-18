@@ -2,6 +2,8 @@ import { productService } from '../services/ProductService.js';
 import { ProductCard } from '../components/ProductCard.js';
 import { URLParams } from '../utils/urlParams.js';
 import { Currency } from '../utils/currency.js';
+import { cartService } from '../services/CartService.js';
+import { CartUtils } from '../utils/cartUtils.js';
 
 class ProductoPage {
     constructor() {
@@ -331,37 +333,51 @@ renderDescripcion() {
         }
     }
 
-    /**
-     * Agregar al carrito
-     */
-    addToCart() {
-        const cantidad = parseInt(document.querySelector('.quantity-input').value);
-        
-        // TODO: Implementar CartService
-        console.log('Agregando al carrito:', {
-            producto: this.producto,
-            cantidad
-        });
+/**
+ * Agregar al carrito
+ */
+addToCart() {
+    const cantidadInput = document.querySelector('.quantity-input');
+    const cantidad = parseInt(cantidadInput.value);
 
-        // Feedback visual (temporal)
-        alert(`${this.producto.nombre} agregado al carrito (${cantidad} unidad${cantidad > 1 ? 'es' : ''})`);
+    // Validar cantidad
+    if (cantidad <= 0 || cantidad > this.producto.stock) {
+        CartUtils.showNotification('Cantidad no válida', 'warning');
+        return;
     }
 
-    /**
-     * Comprar ahora
-     */
-    buyNow() {
-        const cantidad = parseInt(document.querySelector('.quantity-input').value);
-        
-        console.log('Comprando ahora:', {
-            producto: this.producto,
-            cantidad
-        });
+    // Agregar al carrito
+    const result = cartService.addItem(this.producto, cantidad);
 
-        // Redirigir a carrito (futuro)
-        // window.location.href = 'carrito.html';
-        alert('Redirigiendo a checkout...');
+    // Mostrar notificación
+    if (result === 'added') {
+        CartUtils.showNotification(`${this.producto.nombre} agregado al carrito`, 'success');
+    } else {
+        CartUtils.showNotification(`Cantidad actualizada en el carrito`, 'success');
     }
+
+    // Animar icono del carrito
+    CartUtils.animateCartIcon();
+
+    // Resetear cantidad a 1
+    cantidadInput.value = 1;
+}
+
+/**
+ * Comprar ahora
+ */
+buyNow() {
+    const cantidadInput = document.querySelector('.quantity-input');
+    const cantidad = parseInt(cantidadInput.value);
+
+    // Agregar al carrito
+    cartService.addItem(this.producto, cantidad);
+
+    // Abrir modal del carrito
+    import('../components/CartModal.js').then(({ cartModal }) => {
+        cartModal.open();
+    });
+}
 
     /**
      * Mostrar error
