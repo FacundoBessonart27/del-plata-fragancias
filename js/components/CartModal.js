@@ -1,6 +1,7 @@
 import { cartService } from '../services/CartService.js';
 import { CartUtils } from '../utils/cartUtils.js';
 import { Currency } from '../utils/currency.js';
+import { confirmModal } from './ConfirmModal.js';
 
 export class CartModal {
     constructor() {
@@ -184,25 +185,27 @@ export class CartModal {
     /**
      * Manejar acciones de items (aumentar, disminuir, eliminar)
      */
-    handleItemAction(action, productId) {
-        const item = cartService.getItem(productId);
-        if (!item) return;
+    async handleItemAction(action, productId) {
+    const item = cartService.getItem(productId);
+    if (!item) return;
 
-        switch(action) {
-            case 'increase':
-                cartService.updateQuantity(productId, item.cantidad + 1);
-                break;
-            case 'decrease':
-                cartService.updateQuantity(productId, item.cantidad - 1);
-                break;
-            case 'remove':
-                if (confirm(`¿Eliminar ${item.nombre} del carrito?`)) {
-                    cartService.removeItem(productId);
-                    CartUtils.showNotification('Producto eliminado del carrito', 'info');
-                }
-                break;
-        }
+    switch(action) {
+        case 'increase':
+            cartService.updateQuantity(productId, item.cantidad + 1);
+            break;
+        case 'decrease':
+            cartService.updateQuantity(productId, item.cantidad - 1);
+            break;
+        case 'remove':
+            // Mostrar modal de confirmación personalizado
+            const confirmed = await confirmModal.show(item.nombre);
+            if (confirmed) {
+                cartService.removeItem(productId);
+                CartUtils.showNotification('Producto eliminado del carrito', 'info');
+            }
+            break;
     }
+}
 
     /**
      * Manejar checkout
