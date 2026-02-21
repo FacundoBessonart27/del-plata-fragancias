@@ -18,10 +18,13 @@ class CatalogoPage {
             
             // Cargar todos los productos
             this.productos = productService.getAll();
-            this.productosFiltrados = [...this.productos];
+        this.productosFiltrados = [...this.productos];
             
             console.log('✅ Productos cargados:', this.productos.length);
             
+              // Aplicar filtros desde URL (si existen)
+            this.applyURLFilters();
+
             // Renderizar
             this.renderProducts();
             this.updateCount();
@@ -38,6 +41,26 @@ class CatalogoPage {
             this.showError('Error al cargar productos');
         }
     }
+
+    // Aplica filtros basados en parámetros de URL 
+    applyURLFilters() {
+    const genero = URLParams.get('genero');
+    
+    if (genero) {
+        console.log(`🔍 Aplicando filtro de género desde URL: ${genero}`);
+        
+        // Filtrar productos por género
+        this.productosFiltrados = this.productos.filter(p => p.genero === genero);
+        
+        // Marcar el checkbox correspondiente en el sidebar
+        const checkbox = document.querySelector(`input[name="category"][value="${genero}"]`);
+        if (checkbox) {
+            checkbox.checked = true;
+        }
+        
+        console.log(`✅ Filtrado aplicado. Productos: ${this.productosFiltrados.length}`);
+    }
+}
 
     renderProducts() {
         const container = document.querySelector('.products-grid-catalog');

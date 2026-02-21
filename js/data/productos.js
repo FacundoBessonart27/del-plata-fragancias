@@ -394,7 +394,42 @@ export const PRODUCTOS = [
         destacado: true,
         nuevo: false,
         badges: ['exclusivo']
+    },
+    {
+        id: 'scandal-pour-homme-elixir',
+        nombre: 'Jean Paul Gaultier Scandal pour Homme Elixir',
+        marca: 'Jean Paul Gaultier',
+        tipo: 'Elixir',
+        genero: 'hombre',
+        precio: 8250,
+        precioOriginal: null,
+        descripcionCorta: 'Una fragancia audaz y provocadora con notas dulces y especiadas. Para el hombre que no teme romper las reglas.',
+        descripcionLarga: 'Scandal pour Homme Elixir es la versión más intensa y adictiva de la línea Scandal. Un perfume oriental gourmand que combina caramelo salado con especias, creando una experiencia olfativa única y provocadora.',
+        tagline: 'Audaz · Dulce · Provocador',
+        tamaño: '100 ml',
+        familiaOlfativa: 'Oriental Gourmand',
+        ocasion: 'Noche / Fiesta / Eventos',
+        notas: {
+            salida: ['Caramelo Salado', 'Mandarina'],
+            corazon: ['Salvia', 'Lavanda'],
+            fondo: ['Tonka', 'Vainilla', 'Cuero', 'Ámbar']
+        },
+        imagenes: {
+            principal: 'assets/img/CatalogoIMG/ScandalElixir.jpg',
+            galeria: [
+                'assets/img/CatalogoIMG/ScandalElixir.jpg',
+                'assets/img/CatalogoIMG/ScandalElixir2.jpg',
+                'assets/img/CatalogoIMG/ScandalElixir3.jpg',
+                'assets/img/CatalogoIMG/ScandalElixir4.jpg'
+            ]
+        },
+        stock: 7,
+        destacado: true,
+        nuevo: false,
+        badges: ['exclusivo']
     }
+
+    
 ];
 
 
