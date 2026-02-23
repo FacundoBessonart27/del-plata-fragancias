@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finaliza tu compra en Del Plata Fragancias">
+    <title>Checkout | Del Plata Fragancias</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header-main">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <ul class="navbar-menu navbar-menu-left">
+                    <li class="navbar-item">
+                        <a href="index.html" class="navbar-link">Inicio</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="catalogo.html" class="navbar-link">Catálogo</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-brand">
+                    <a href="index.html" class="brand-link">
+                        <h1 class="brand-title">DEL PLATA</h1>
+                        <h2 class="brand-subtitle">FRAGANCIAS</h2>
+                    </a>
+                </div>
+
+                <ul class="navbar-menu navbar-menu-right">
+                    <li class="navbar-item">
+                        <a href="contacto.html" class="navbar-link">Contacto</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-cart">
+                    <button class="cart-link" aria-label="Abrir carrito">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+
+                <button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menú">
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Breadcrumb -->
+        <section class="breadcrumb-section">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Navegación de ruta">
+                    <ol class="breadcrumb-list">
+                        <li class="breadcrumb-item">
+                            <a href="index.html" class="breadcrumb-link">Inicio</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="catalogo.html" class="breadcrumb-link">Catálogo</a>
+                        </li>
+                        <li class="breadcrumb-item breadcrumb-active" aria-current="page">
+                            Checkout
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Checkout Section -->
+        <section class="checkout-section">
+            <div class="container">
+                <h1 class="page-title">Finalizar Compra</h1>
+                
+                <div class="checkout-layout">
+                    
+                    <!-- Formulario de Cliente -->
+                    <div class="checkout-form-container">
+                        <h2 class="checkout-subtitle">Información de Contacto</h2>
+                        <p class="checkout-description">
+                            Complete sus datos para procesar la compra
+                        </p>
+
+                        <form id="checkoutForm" class="checkout-form" novalidate>
+                            
+                            <!-- Nombre -->
+                            <div class="form-group">
+                                <label for="customerName" class="form-label">
+                                    Nombre Completo <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="customerName" 
+                                    name="name"
+                                    class="form-input" 
+                                    placeholder="Ej: Juan Pérez"
+                                    required
+                                    autocomplete="name"
+                                >
+                                <span class="form-error" id="nameError"></span>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="customerEmail" class="form-label">
+                                    Email <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="customerEmail" 
+                                    name="email"
+                                    class="form-input" 
+                                    placeholder="ejemplo@email.com"
+                                    required
+                                    autocomplete="email"
+                                >
+                                <span class="form-error" id="emailError"></span>
+                            </div>
+
+                            <!-- Teléfono -->
+                            <div class="form-group">
+                                <label for="customerPhone" class="form-label">
+                                    Teléfono <span class="required">*</span>
+                                </label>
+                                <input 
+                                    type="tel" 
+                                    id="customerPhone" 
+                                    name="phone"
+                                    class="form-input" 
+                                    placeholder="099 123 456"
+                                    required
+                                    autocomplete="tel"
+                                >
+                                <span class="form-error" id="phoneError"></span>
+                            </div>
+
+                            <!-- Botón Submit -->
+                            <button type="submit" class="btn btn-primary btn-checkout-submit">
+                                <span class="btn-icon">✓</span>
+                                <span class="btn-text">Confirmar Compra</span>
+                            </button>
+
+                        </form>
+                    </div>
+
+                    <!-- Resumen del Pedido -->
+                    <div class="checkout-summary-container">
+                        <h2 class="checkout-subtitle">Resumen del Pedido</h2>
+                        
+                        <!-- Items del carrito -->
+                        <div class="checkout-items" id="checkoutItems">
+                            <!-- Se llena dinámicamente con JS -->
+                        </div>
+
+                        <!-- Totales -->
+                        <div class="checkout-totals">
+                            <div class="checkout-total-row">
+                                <span class="checkout-total-label">Subtotal:</span>
+                                <span class="checkout-total-value" id="checkoutSubtotal">$U 0</span>
+                            </div>
+                            <div class="checkout-total-row">
+                                <span class="checkout-total-label">Envío:</span>
+                                <span class="checkout-total-value checkout-shipping">A calcular</span>
+                            </div>
+                            <div class="checkout-total-row checkout-total-final">
+                                <span class="checkout-total-label">Total:</span>
+                                <span class="checkout-total-value" id="checkoutTotal">$U 0</span>
+                            </div>
+                        </div>
+
+                        <!-- Garantías -->
+                        <div class="checkout-guarantees">
+                            <div class="checkout-guarantee-item">
+                                <span class="guarantee-icon">✓</span>
+                                <span class="guarantee-text">Compra Segura</span>
+                            </div>
+                            <div class="checkout-guarantee-item">
+                                <span class="guarantee-icon">✓</span>
+                                <span class="guarantee-text">Productos Originales</span>
+                            </div>
+                            <div class="checkout-guarantee-item">
+                                <span class="guarantee-icon">✓</span>
+                                <span class="guarantee-text">Devolución en 30 días</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <!-- Tu footer actual -->
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/pages/checkoutPage.js"></script>
+
+</body>
+</html>

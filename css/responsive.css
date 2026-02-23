@@ -1424,3 +1424,112 @@
         flex-direction: column;
     }
 }
+
+
+/* ===== Checkout Section ===== */
+@media (max-width: 1024px) {
+    .checkout-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-3xl);
+    }
+
+    .checkout-summary-container {
+        position: static;
+        order: -1;
+    }
+}
+
+@media (max-width: 480px) {
+    .checkout-section {
+        padding: var(--spacing-3xl) 0;
+    }
+
+    .checkout-subtitle {
+        font-size: var(--font-size-lg);
+    }
+
+    .checkout-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .checkout-item-image {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+}
+
+/* ===== Success Section ===== */
+@media (max-width: 768px) {
+    .success-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .success-description {
+        font-size: var(--font-size-base);
+    }
+
+    .success-order-number {
+        font-size: var(--font-size-xl);
+    }
+
+    .success-actions {
+        flex-direction: column;
+    }
+
+    .success-actions .btn {
+        width: 100%;
+    }
+    .success-content {
+        padding: 0 var(--spacing-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .success-section {
+        padding: var(--spacing-3xl) var(--spacing-md);
+    }
+
+    .success-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .success-order-number {
+        font-size: var(--font-size-lg);
+        letter-spacing: 1px;
+    }
+
+    .success-message {
+        padding: var(--spacing-xl);
+    }
+
+    .step-text {
+        font-size: var(--font-size-sm);
+    }
+    .success-content {
+        padding: 0 var(--spacing-md);
+    }
+}
+
+/* ===== Alerta Confirmación ===== */
+@media (max-width: 480px) {
+    .confirm-alert {
+        padding: var(--spacing-2xl) var(--spacing-xl);
+    }
+
+    .confirm-alert-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 36px;
+    }
+
+    .confirm-alert-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .confirm-alert-message {
+        font-size: var(--font-size-sm);
+    }
+}
+

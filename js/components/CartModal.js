@@ -211,17 +211,15 @@ export class CartModal {
      * Manejar checkout
      */
     handleCheckout() {
-        if (cartService.isEmpty()) {
-            CartUtils.showNotification('El carrito está vacío', 'warning');
-            return;
-        }
-
-        // TODO: Implementar página de checkout
-        console.log('Redirigiendo a checkout...');
-        CartUtils.showNotification('Función de checkout en desarrollo', 'info');
-        
-        // Futuro: window.location.href = 'checkout.html';
+    if (cartService.isEmpty()) {
+        CartUtils.showNotification('El carrito está vacío', 'warning');
+        return;
     }
+
+    // Redirigir a checkout
+    console.log('✅ Redirigiendo a checkout...');
+    window.location.href = 'checkout.html';
+}
 
     /**
      * Alternar visibilidad (abrir/cerrar)
