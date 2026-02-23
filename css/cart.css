@@ -603,3 +603,86 @@
         transform: translateY(0);
     }
 }
+
+
+/* ===== Validation Alert ===== */
+.validation-alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+    z-index: 10003;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.validation-alert-overlay.show {
+    opacity: 1;
+}
+
+.validation-alert {
+    background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-medium) 100%);
+    border: 2px solid #ff9800;
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(255, 152, 0, 0.3);
+    transform: scale(0.9) translateY(-20px);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.validation-alert-overlay.show .validation-alert {
+    transform: scale(1) translateY(0);
+}
+
+.validation-alert-icon {
+    font-size: 72px;
+    margin: 0 auto var(--spacing-xl);
+    animation: warningShake 0.5s ease-in-out;
+}
+
+@keyframes warningShake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
+    20%, 40%, 60%, 80% { transform: translateX(8px); }
+}
+
+.validation-alert-title {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin: 0 0 var(--spacing-md) 0;
+    animation: fadeInUp 0.4s ease-out 0.1s both;
+}
+
+.validation-alert-message {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0 0 var(--spacing-2xl) 0;
+    animation: fadeInUp 0.4s ease-out 0.2s both;
+}
+
+.validation-alert-button {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--font-size-lg);
+    background-color: #ff9800;
+    border-color: #ff9800;
+    animation: fadeInUp 0.4s ease-out 0.3s both;
+}
+
+.validation-alert-button:hover {
+    background-color: #f57c00;
+    border-color: #f57c00;
+}    

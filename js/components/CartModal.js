@@ -1,7 +1,7 @@
 import { cartService } from '../services/CartService.js';
 import { CartUtils } from '../utils/cartUtils.js';
 import { Currency } from '../utils/currency.js';
-import { confirmModal } from './ConfirmModal.js';
+
 
 export class CartModal {
     constructor() {
@@ -197,7 +197,8 @@ export class CartModal {
             cartService.updateQuantity(productId, item.cantidad - 1);
             break;
         case 'remove':
-            // Mostrar modal de confirmación personalizado
+            // Importar dinámicamente solo cuando se necesita
+            const { confirmModal } = await import('./ConfirmModal.js');
             const confirmed = await confirmModal.show(item.nombre);
             if (confirmed) {
                 cartService.removeItem(productId);

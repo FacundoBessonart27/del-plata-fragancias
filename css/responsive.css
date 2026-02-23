@@ -1532,4 +1532,21 @@
         font-size: var(--font-size-sm);
     }
 }
+/* ===== Validatior alert ===== */
+@media (max-width: 480px) {
+    .validation-alert {
+        padding: var(--spacing-2xl) var(--spacing-xl);
+    }
 
+    .validation-alert-icon {
+        font-size: 56px;
+    }
+
+    .validation-alert-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .validation-alert-message {
+        font-size: var(--font-size-sm);
+    }
+}

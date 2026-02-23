@@ -3,6 +3,7 @@ import { orderService } from '../services/OrderService.js';
 import { Currency } from '../utils/currency.js';
 import { Validator } from '../utils/validator.js';
 import { confirmAlert } from '../components/ConfirmAlerts.js';
+import { validationAlert } from '../components/ValidationAlert.js';
 
 class CheckoutPage {
     constructor() {
@@ -192,10 +193,20 @@ class CheckoutPage {
         const isPhoneValid = this.validatePhone();
 
         if (!isNameValid || !isEmailValid || !isPhoneValid) {
-            console.warn('⚠️ Formulario con errores');
-            alert('Por favor, completa correctamente todos los campos');
-            return;
+        console.warn('⚠️ Formulario con errores');
+        
+        // Mostrar alerta elegante de validación
+        await validationAlert.show('Por favor, completa correctamente todos los campos');
+        
+        // Hacer scroll al primer campo con error
+        const firstError = document.querySelector('.form-input-error');
+        if (firstError) {
+            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            firstError.focus();
         }
+        
+        return;
+    }
 
         // PASO 2: Recopilar datos del formulario
         const formData = {
@@ -208,10 +219,10 @@ class CheckoutPage {
 
         // PASO 3: Verificar nuevamente que el carrito no esté vacío
         if (cartService.isEmpty()) {
-            alert('Tu carrito está vacío');
-            window.location.href = 'catalogo.html';
-            return;
-        }
+    await validationAlert.show('Tu carrito está vacío. Agrega productos antes de continuar.');
+    window.location.href = 'catalogo.html';
+    return;
+}
 
         // PASO 4: Crear orden
         try {
@@ -234,9 +245,9 @@ class CheckoutPage {
             window.location.href = `success.html?order=${order.id}`;
 
         } catch (error) {
-            console.error('❌ Error al procesar orden:', error);
-            alert('Hubo un error al procesar tu compra. Por favor, intenta nuevamente.');
-        }
+    console.error('❌ Error al procesar orden:', error);
+    await validationAlert.show('Hubo un error al procesar tu compra. Por favor, intenta nuevamente.');
+}
     }
 }
 
