@@ -1550,3 +1550,129 @@
         font-size: var(--font-size-sm);
     }
 }
+
+
+
+/* ===== Nosotros html ===== */
+
+@media (max-width: 1024px) {
+    .nosotros-hero-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .nosotros-historia-layout,
+    .elegirnos-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-3xl);
+    }
+
+    .elegirnos-layout {
+        direction: rtl;
+    }
+
+    .elegirnos-content {
+        direction: ltr;
+    }
+
+    .valores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .nosotros-hero {
+        height: 50vh;
+        min-height: 350px;
+        background-attachment: scroll;
+    }
+
+    .nosotros-hero-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .nosotros-hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .nosotros-historia,
+    .nosotros-valores,
+    .nosotros-elegirnos,
+    .nosotros-compromiso,
+    .nosotros-cta {
+        padding: var(--spacing-4xl) 0;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .compromiso-text p {
+        font-size: var(--font-size-base);
+    }
+
+    .quote-text {
+        font-size: var(--font-size-lg);
+    }
+
+    .nosotros-cta-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .nosotros-cta-buttons {
+        flex-direction: column;
+    }
+
+    .nosotros-cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .nosotros-hero {
+        height: 40vh;
+        min-height: 300px;
+    }
+
+    .nosotros-hero-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .nosotros-historia,
+    .nosotros-valores,
+    .nosotros-elegirnos,
+    .nosotros-compromiso,
+    .nosotros-cta {
+        padding: var(--spacing-3xl) 0;
+    }
+
+    .nosotros-text p,
+    .elegirnos-text {
+        font-size: var(--font-size-sm);
+    }
+
+    .valor-card {
+        padding: var(--spacing-xl);
+    }
+
+    .compromiso-quote {
+        padding: var(--spacing-2xl);
+    }
+
+    .compromiso-quote::before {
+        font-size: 60px;
+        top: -15px;
+    }
+
+    .quote-text {
+        font-size: var(--font-size-base);
+    }
+
+    .nosotros-cta-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .nosotros-cta-text {
+        font-size: var(--font-size-base);
+    }
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce la historia de Del Plata Fragancias - Tu tienda de perfumes premium en Uruguay">
+    <title>Nosotros | Del Plata Fragancias</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/iconoDPF.png" />
+
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/nosotros.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header-main">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <ul class="navbar-menu navbar-menu-left">
+                    <li class="navbar-item">
+                        <a href="index.html" class="navbar-link">Inicio</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="catalogo.html" class="navbar-link">Catálogo</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="guias.html" class="navbar-link">Guías</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-brand">
+                    <a href="index.html" class="brand-link">
+                        <h1 class="brand-title">DEL PLATA</h1>
+                        <h2 class="brand-subtitle">FRAGANCIAS</h2>
+                    </a>
+                </div>
+
+                <ul class="navbar-menu navbar-menu-right">
+                    <li class="navbar-item">
+                        <a href="contacto.html" class="navbar-link">Contacto</a>
+                    </li>
+                    <li class="navbar-item navbar-item-account">
+                        <a href="login.html" class="navbar-link navbar-link-account">Mi Cuenta</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-cart">
+                    <button class="cart-link" aria-label="Abrir carrito">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+
+                <button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menú">
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Hero Section -->
+        <section class="nosotros-hero">
+            <div class="nosotros-hero-overlay"></div>
+            <div class="container">
+                <div class="nosotros-hero-content">
+                    <h1 class="nosotros-hero-title">Sobre Nosotros</h1>
+                    <p class="nosotros-hero-subtitle">
+                        Más que una tienda, una experiencia olfativa única
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nuestra Historia -->
+        <section class="nosotros-historia">
+            <div class="container">
+                <div class="nosotros-historia-layout">
+                    <div class="nosotros-historia-content">
+                        <h2 class="section-title">Nuestra Historia</h2>
+                        <div class="nosotros-text">
+                            <p>
+                                <strong>Del Plata Fragancias</strong> nació en Uruguay con una pasión: hacer accesibles 
+                                las fragancias más exclusivas del mundo. Desde nuestros inicios, nos hemos dedicado 
+                                a curar una selección única de perfumes que representan elegancia, distinción y calidad.
+                            </p>
+                            <p>
+                                Creemos que una fragancia es mucho más que un aroma; es una declaración personal, 
+                                un recuerdo, una conexión emocional. Por eso, cada producto en nuestro catálogo 
+                                ha sido cuidadosamente seleccionado para ofrecerte lo mejor de la perfumería internacional.
+                            </p>
+                            <p>
+                                Con años de experiencia en el sector, nos enorgullece ser la referencia en fragancias 
+                                premium en Uruguay, siempre comprometidos con la autenticidad y la satisfacción 
+                                de nuestros clientes.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="nosotros-historia-image">
+                        <img src="assets/img/nosotrosHero.png" alt="Historia de Del Plata Fragancias" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nuestros Valores -->
+        <section class="nosotros-valores">
+            <div class="container">
+                <h2 class="section-title section-title-center">Nuestros Valores</h2>
+                <p class="section-subtitle">Los pilares que guían nuestro trabajo cada día</p>
+                
+                <div class="valores-grid">
+                    
+                    <!-- Valor 1 -->
+                    <article class="valor-card">
+                        <div class="valor-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="28" stroke="#C9A05C" stroke-width="2"/>
+                                <path d="M20 30L27 37L40 24" stroke="#C9A05C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="valor-title">Autenticidad</h3>
+                        <p class="valor-description">
+                            Garantizamos que cada producto es 100% original. 
+                            Trabajamos directamente con distribuidores autorizados.
+                        </p>
+                    </article>
+
+                    <!-- Valor 2 -->
+                    <article class="valor-card">
+                        <div class="valor-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30 10L35 25L50 25L38 35L43 50L30 40L17 50L22 35L10 25L25 25L30 10Z" stroke="#C9A05C" stroke-width="2" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="valor-title">Excelencia</h3>
+                        <p class="valor-description">
+                            Seleccionamos solo las mejores marcas y fragancias 
+                            para ofrecerte productos de la más alta calidad.
+                        </p>
+                    </article>
+
+                    <!-- Valor 3 -->
+                    <article class="valor-card">
+                        <div class="valor-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="25" r="10" stroke="#C9A05C" stroke-width="2"/>
+                                <path d="M15 50C15 40 21 35 30 35C39 35 45 40 45 50" stroke="#C9A05C" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="valor-title">Atención Personalizada</h3>
+                        <p class="valor-description">
+                            Cada cliente es único. Te acompañamos en la elección 
+                            perfecta para ti o para regalar.
+                        </p>
+                    </article>
+
+                    <!-- Valor 4 -->
+                    <article class="valor-card">
+                        <div class="valor-icon">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 30L30 20L40 30M30 20V50" stroke="#C9A05C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 15L30 5L50 15" stroke="#C9A05C" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="valor-title">Envío Seguro</h3>
+                        <p class="valor-description">
+                            Empaquetamos con cuidado cada producto para que llegue 
+                            en perfectas condiciones a tu hogar.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Por Qué Elegirnos -->
+        <section class="nosotros-elegirnos">
+            <div class="container">
+                <div class="elegirnos-layout">
+                    <div class="elegirnos-image">
+                        <img src="assets/img/nosotrosElegirnos.png" alt="Por qué elegir Del Plata" loading="lazy">
+                    </div>
+                    <div class="elegirnos-content">
+                        <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+                        <ul class="elegirnos-list">
+                            <li class="elegirnos-item">
+                                <span class="elegirnos-icon">→</span>
+                                <div class="elegirnos-text">
+                                    <strong>Catálogo Exclusivo:</strong> Marcas reconocidas mundialmente, 
+                                    seleccionadas especialmente para el mercado uruguayo.
+                                </div>
+                            </li>
+                            <li class="elegirnos-item">
+                                <span class="elegirnos-icon">→</span>
+                                <div class="elegirnos-text">
+                                    <strong>Garantía de Originalidad:</strong> Todos nuestros productos 
+                                    son auténticos con certificado de garantía.
+                                </div>
+                            </li>
+                            <li class="elegirnos-item">
+                                <span class="elegirnos-icon">→</span>
+                                <div class="elegirnos-text">
+                                    <strong>Envío a Todo Uruguay:</strong> Llegamos a Montevideo 
+                                    y todo el interior con envíos rápidos y seguros.
+                                </div>
+                            </li>
+                            <li class="elegirnos-item">
+                                <span class="elegirnos-icon">→</span>
+                                <div class="elegirnos-text">
+                                    <strong>Asesoramiento Experto:</strong> Nuestro equipo te ayuda 
+                                    a elegir la fragancia perfecta según tu personalidad y preferencias.
+                                </div>
+                            </li>
+                            <li class="elegirnos-item">
+                                <span class="elegirnos-icon">→</span>
+                                <div class="elegirnos-text">
+                                    <strong>Devolución en 30 Días:</strong> Si no quedas satisfecho, 
+                                    tienes 30 días para devolver tu compra.
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="elegirnos-cta">
+                            <a href="catalogo.html" class="btn btn-primary">Ver Catálogo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compromiso -->
+        <section class="nosotros-compromiso">
+            <div class="container">
+                <div class="compromiso-content">
+                    <h2 class="section-title section-title-center">Nuestro Compromiso</h2>
+                    <div class="compromiso-text">
+                        <p>
+                            En <strong>Del Plata Fragancias</strong>, nuestro compromiso va más allá de vender perfumes. 
+                            Nos dedicamos a crear experiencias memorables, a ser parte de tus momentos especiales 
+                            y a ayudarte a expresar tu identidad a través del aroma.
+                        </p>
+                        <p>
+                            Cada día trabajamos para mejorar nuestro servicio, ampliar nuestro catálogo 
+                            y estar más cerca de ti. Tu satisfacción es nuestra mayor motivación.
+                        </p>
+                    </div>
+                    <div class="compromiso-quote">
+                        <p class="quote-text">
+                            "Una fragancia no se elige, te elige a ti. 
+                            Nuestro trabajo es ayudarte a encontrar esa conexión perfecta."
+                        </p>
+                        <p class="quote-author">— Del Plata Fragancias</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="nosotros-cta">
+            <div class="container">
+                <div class="nosotros-cta-content">
+                    <h2 class="nosotros-cta-title">¿Listo para Encontrar tu Fragancia Perfecta?</h2>
+                    <p class="nosotros-cta-text">
+                        Explora nuestro catálogo y descubre las mejores marcas de perfumería internacional
+                    </p>
+                    <div class="nosotros-cta-buttons">
+                        <a href="catalogo.html" class="btn btn-primary">Ver Catálogo</a>
+                        <a href="contacto.html" class="btn btn-secondary">Contáctanos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-container">            
+            <!-- Columna 1: Enlaces rápidos -->
+            <div class="footer-column footer-column-links">
+                <h4 class="footer-column-title">Del Plata Fragancias</h4>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="nosotros.html" class="footer-link">Nosotros</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="catalogo.html" class="footer-link">Catálogo</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="contacto.html" class="footer-link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna 2: Atención al cliente -->
+            <div class="footer-column footer-column-customer">
+                <h4 class="footer-column-title">Atención al Cliente</h4>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="preguntas-frecuentes.html" class="footer-link">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="envios-devoluciones.html" class="footer-link">Envíos y Devoluciones</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="politica-privacidad.html" class="footer-link">Política de Privacidad</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Redes Sociales -->
+            <div class="footer-column footer-column-about">
+                <h4 class="footer-column-title">Síguenos</h4>
+                <div class="footer-social">
+                    <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/facebook.png" alt="Icono Facebook"></span>
+                    </a>
+                    <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/instagram.png" alt="Icono Instagram"></span>
+                    </a>
+                    <a href="https://twitter.com" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/TwitterIcono.png" alt="Icono Twitter"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna 4: Suscripción Newsletter -->
+            <div class="footer-column footer-column-subscribe">
+                <h4 class="footer-column-title">Suscríbete</h4>
+                <p class="footer-text footer-text-small">
+                    Recibe nuestras novedades
+                </p>
+                <form class="footer-newsletter-form" id="newsletterForm" action="#" method="post">
+                    <div class="form-group">
+                        <input type="email" id="newsletterEmail" name="email" class="form-input footer-input" placeholder="E-mail adress" required aria-label="Correo electrónico para newsletter">
+                        <button type="submit" class="btn btn-primary btn-newsletter-footer">Suscribirme</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="footer-copyright">
+                    &copy; 2026 Del Plata Fragancias. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/header.js"></script>
+
+</body>
+</html>
