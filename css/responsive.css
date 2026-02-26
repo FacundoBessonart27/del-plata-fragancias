@@ -1676,3 +1676,111 @@
         font-size: var(--font-size-base);
     }
 }
+
+
+/* ===== Contacto ===== */
+
+@media (max-width: 1024px) {
+  
+    .contacto-layout {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-4xl);
+    }
+
+    .contacto-info-container {
+        position: static;
+        order: 2;
+    }
+
+    .contacto-form-container {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto-hero {
+        min-height: 40vh;  
+        background-attachment: scroll;
+    }
+
+    .contacto-hero-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .contacto-hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .contacto-main-section,
+    .contacto-faq {
+        padding: var(--spacing-4xl) 0;
+    }
+
+    .contacto-subtitle {
+        font-size: var(--font-size-xl);
+    }
+
+    .contacto-form-container {
+        padding: var(--spacing-2xl);
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .contacto-hero-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .contacto-info-container,
+    .contacto-form-container {
+        padding: var(--spacing-xl);
+    }
+
+    .contacto-info-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contacto-social-links {
+        justify-content: center;
+    }
+
+    .faq-item {
+        padding: var(--spacing-xl);
+    }
+
+    .faq-question {
+        font-size: var(--font-size-base);
+    }
+
+    .faq-answer {
+        font-size: var(--font-size-sm);
+    }
+    .contact-success-alert {
+        padding: var(--spacing-2xl) var(--spacing-xl);
+    }
+
+    .contact-success-icon svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contact-success-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .contact-success-message {
+        font-size: var(--font-size-sm);
+    }
+      .contacto-hero {
+        min-height: 35vh;  
+    }
+
+    .contacto-hero-title {
+        font-size: var(--font-size-2xl);
+    }
+}

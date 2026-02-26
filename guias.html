@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guías de fragancias - Aprende a elegir el perfume perfecto para cada ocasión">
+    <title>Guías de Fragancias | Del Plata Fragancias</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/guias.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/iconoDPF.png" />
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header-main">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <ul class="navbar-menu navbar-menu-left">
+                    <li class="navbar-item">
+                        <a href="index.html" class="navbar-link">Inicio</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="catalogo.html" class="navbar-link">Catálogo</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="guias.html" class="navbar-link navbar-link-active">Guías</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-brand">
+                    <a href="index.html" class="brand-link">
+                        <h1 class="brand-title">DEL PLATA</h1>
+                        <h2 class="brand-subtitle">FRAGANCIAS</h2>
+                    </a>
+                </div>
+
+                <ul class="navbar-menu navbar-menu-right">
+                    <li class="navbar-item">
+                        <a href="contacto.html" class="navbar-link">Contacto</a>
+                    </li>
+                    <li class="navbar-item navbar-item-account">
+                        <a href="login.html" class="navbar-link navbar-link-account">Mi Cuenta</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-cart">
+                    <button class="cart-link" aria-label="Abrir carrito">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+
+                <button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menú">
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Hero Section -->
+        <section class="guias-hero">
+            <div class="guias-hero-overlay"></div>
+            <div class="container">
+                <div class="guias-hero-content">
+                    <h1 class="guias-hero-title">Guías de Fragancias</h1>
+                    <p class="guias-hero-subtitle">
+                        Todo lo que necesitas saber para elegir el perfume perfecto
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introducción -->
+        <section class="guias-intro">
+            <div class="container">
+                <div class="guias-intro-content">
+                    <h2 class="section-title section-title-center">Descubre el Mundo de las Fragancias</h2>
+                    <p class="guias-intro-text">
+                        Elegir un perfume es mucho más que encontrar un aroma agradable. 
+                        Es descubrir una extensión de tu personalidad, una firma olfativa única. 
+                        En estas guías te ayudamos a entender las familias olfativas, 
+                        a elegir según la ocasión y a cuidar tus fragancias favoritas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guías Grid -->
+        <section class="guias-main">
+            <div class="container">
+                <div class="guias-grid">
+
+                    <!-- Guía 1: Familias Olfativas -->
+                    <article class="guia-card">
+                        <div class="guia-card-number">01</div>
+                        <div class="guia-card-icon">🌸</div>
+                        <h3 class="guia-card-title">Familias Olfativas</h3>
+                        <p class="guia-card-description">
+                            Aprende a identificar las principales familias: Florales, Orientales, 
+                            Cítricas, Amaderadas y más. Descubre cuál se adapta mejor a tu personalidad.
+                        </p>
+                        <div class="guia-card-content">
+                            <h4 class="guia-subtitle">Principales Familias:</h4>
+                            <ul class="guia-list">
+                                <li><strong>Florales:</strong> Románticas, frescas, delicadas. Ideales para el día.</li>
+                                <li><strong>Orientales:</strong> Cálidas, especiadas, sensuales. Perfectas para la noche.</li>
+                                <li><strong>Cítricas:</strong> Frescas, energizantes, ligeras. Ideales para verano.</li>
+                                <li><strong>Amaderadas:</strong> Masculinas, elegantes, sofisticadas. Todo terreno.</li>
+                                <li><strong>Fougère:</strong> Clásicas, versátiles, refinadas. Para cualquier ocasión.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Guía 2: Tipos de Concentración -->
+                    <article class="guia-card">
+                        <div class="guia-card-number">02</div>
+                        <div class="guia-card-icon">💧</div>
+                        <h3 class="guia-card-title">Tipos de Concentración</h3>
+                        <p class="guia-card-description">
+                            Entiende la diferencia entre Parfum, EDP, EDT y EDC. 
+                            Cada concentración tiene duración y potencia distintas.
+                        </p>
+                        <div class="guia-card-content">
+                            <h4 class="guia-subtitle">Concentraciones:</h4>
+                            <ul class="guia-list">
+                                <li><strong>Parfum (15-40%):</strong> La más concentrada. Dura 8-12 horas. Muy potente.</li>
+                                <li><strong>EDP - Eau de Parfum (10-20%):</strong> Alta duración. 6-8 horas. Ideal para uso diario.</li>
+                                <li><strong>EDT - Eau de Toilette (5-15%):</strong> Media duración. 4-6 horas. Fresca y ligera.</li>
+                                <li><strong>EDC - Eau de Cologne (2-5%):</strong> Ligera. 2-4 horas. Perfecta para refrescar.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Guía 3: Cómo Aplicar -->
+                    <article class="guia-card">
+                        <div class="guia-card-number">03</div>
+                        <div class="guia-card-icon">✨</div>
+                        <h3 class="guia-card-title">Cómo Aplicar Correctamente</h3>
+                        <p class="guia-card-description">
+                            Maximiza la duración de tu fragancia aplicándola en los puntos de pulso correctos 
+                            y siguiendo estos consejos profesionales.
+                        </p>
+                        <div class="guia-card-content">
+                            <h4 class="guia-subtitle">Mejores Prácticas:</h4>
+                            <ul class="guia-list">
+                                <li><strong>Puntos de Pulso:</strong> Muñecas, cuello, detrás de orejas, codos internos.</li>
+                                <li><strong>Distancia:</strong> Aplica a 15-20 cm de la piel para distribución uniforme.</li>
+                                <li><strong>No Frotar:</strong> Deja que se seque naturalmente para preservar las notas.</li>
+                                <li><strong>Capas:</strong> Usa loción o aceite sin aroma primero para mejor fijación.</li>
+                                <li><strong>Cabello:</strong> Aplica en el cepillo (no directo) para aroma duradero.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Guía 4: Según la Ocasión -->
+                    <article class="guia-card">
+                        <div class="guia-card-number">04</div>
+                        <div class="guia-card-icon">📅</div>
+                        <h3 class="guia-card-title">Fragancias Según la Ocasión</h3>
+                        <p class="guia-card-description">
+                            Cada momento merece un aroma diferente. Descubre qué fragancia 
+                            es perfecta para cada situación.
+                        </p>
+                        <div class="guia-card-content">
+                            <h4 class="guia-subtitle">Por Ocasión:</h4>
+                            <ul class="guia-list">
+                                <li><strong>Oficina/Trabajo:</strong> Frescas, discretas, profesionales. EDT ligeras.</li>
+                                <li><strong>Día Casual:</strong> Cítricas, florales suaves. Frescas y naturales.</li>
+                                <li><strong>Noche/Fiesta:</strong> Orientales, amaderadas intensas. EDP potentes.</li>
+                                <li><strong>Cita Romántica:</strong> Sensuales, dulces, cautivadoras. Florales orientales.</li>
+                                <li><strong>Deporte:</strong> Acuáticas, cítricas energéticas. Muy ligeras.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Guía 5: Almacenamiento -->
+                    <article class="guia-card">
+                        <div class="guia-card-number">05</div>
+                        <div class="guia-card-icon">🏺</div>
+                        <h3 class="guia-card-title">Cómo Conservar tus Perfumes</h3>
+                        <p class="guia-card-description">
+                            Protege tu inversión. Aprende a almacenar correctamente tus fragancias 
+                            para que mantengan su calidad por años.
+                        </p>
+                        <div class="guia-card-content">
+                            <h4 class="guia-subtitle">Consejos de Conservación:</h4>
+                            <ul class="guia-list">
+                                <li><strong>Luz:</strong> Evita luz solar directa. Guarda en lugar oscuro.</li>
+                                <li><strong>Temperatura:</strong> Mantén en lugar fresco (15-20°C). No en baño.</li>
+                                <li><strong>Humedad:</strong> Evita ambientes húmedos que oxiden el perfume.</li>
+                                <li><strong>Envase:</strong> Mantén la tapa cerrada siempre. Usa atomizador original.</li>
+                                <li><strong>Posición:</strong> Almacena vertical, nunca de lado. Evita agitación.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Guía 6: Elegir el Perfecto -->
+                    <article class="guia-card">
+                        <div class="guia-card-number">06</div>
+                        <div class="guia-card-icon">🎯</div>
+                        <h3 class="guia-card-title">Cómo Elegir tu Perfume Ideal</h3>
+                        <p class="guia-card-description">
+                            Sigue estos pasos para encontrar la fragancia que realmente te representa 
+                            y te acompaña en tu día a día.
+                        </p>
+                        <div class="guia-card-content">
+                            <h4 class="guia-subtitle">Proceso de Elección:</h4>
+                            <ul class="guia-list">
+                                <li><strong>Conoce tu Estilo:</strong> Define si prefieres algo fresco, dulce, intenso o sutil.</li>
+                                <li><strong>Prueba en Piel:</strong> Nunca compres sin probar. Cada piel es diferente.</li>
+                                <li><strong>Espera 30 Minutos:</strong> Las notas de corazón y fondo tardan en aparecer.</li>
+                                <li><strong>No Mezcles:</strong> Prueba máximo 3 fragancias por vez para no saturarte.</li>
+                                <li><strong>Pide Opiniones:</strong> Consulta con amigos o asesores de confianza.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="guias-cta">
+            <div class="container">
+                <div class="guias-cta-content">
+                    <h2 class="guias-cta-title">¿Listo para Encontrar tu Fragancia Perfecta?</h2>
+                    <p class="guias-cta-text">
+                        Explora nuestro catálogo y descubre perfumes que se adaptan a tu personalidad
+                    </p>
+                    <a href="catalogo.html" class="btn btn-primary btn-large">Ver Catálogo Completo</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-container">            
+            <div class="footer-column footer-column-links">
+                <h4 class="footer-column-title">Del Plata Fragancias</h4>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="nosotros.html" class="footer-link">Nosotros</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="catalogo.html" class="footer-link">Catálogo</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="contacto.html" class="footer-link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-column-customer">
+                <h4 class="footer-column-title">Atención al Cliente</h4>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="preguntas-frecuentes.html" class="footer-link">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="envios-devoluciones.html" class="footer-link">Envíos y Devoluciones</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="politica-privacidad.html" class="footer-link">Política de Privacidad</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-column-about">
+                <h4 class="footer-column-title">Síguenos</h4>
+                <div class="footer-social">
+                    <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/facebook.png" alt="Icono de Facebook"></span>
+                    </a>
+                    <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/instagram.png" alt="Icono de Instagram"></span>
+                    </a>
+                    <a href="https://twitter.com" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/TwitterIcono.png" alt="Icono de Twitter"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-column-subscribe">
+                <h4 class="footer-column-title">Suscríbete</h4>
+                <p class="footer-text footer-text-small">
+                    Recibe nuestras novedades
+                </p>
+                <form class="footer-newsletter-form" id="newsletterForm" action="#" method="post">
+                    <div class="form-group">
+                        <input type="email" id="newsletterEmail" name="email" class="form-input footer-input" placeholder="E-mail adress" required aria-label="Correo electrónico para newsletter">
+                        <button type="submit" class="btn btn-primary btn-newsletter-footer">Suscribirme</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="footer-copyright">
+                    &copy; 2026 Del Plata Fragancias. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/header.js"></script>
+
+</body>
+</html>
