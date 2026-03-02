@@ -1784,3 +1784,59 @@
         font-size: var(--font-size-2xl);
     }
 }
+
+/* ===== Guías HTML =====*/
+
+
+@media (max-width: 1024px) {
+    .guias-grid-new {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .guia-card-featured {
+        grid-column: span 2;
+        grid-row: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .guias-hero-new {
+        min-height: 60vh;
+        background-attachment: scroll;
+    }
+
+    .guias-hero-title-new {
+        font-size: 2.5rem;
+    }
+
+    .guias-hero-subtitle-new {
+        font-size: var(--font-size-base);
+    }
+
+    .guias-grid-new {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .guia-card-featured {
+        grid-column: 1;
+    }
+
+    .guias-cta-title-new {
+        font-size: var(--font-size-2xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .guias-hero-title-new {
+        font-size: 2rem;
+    }
+
+    .guia-card-new {
+        padding: var(--spacing-xl);
+    }
+
+    .guia-title {
+        font-size: var(--font-size-lg);
+    }
+}
