@@ -89,107 +89,111 @@
     </section>
 
     <!-- Guías Grid Reorganizado -->
-    <section class="guias-main-new">
-        <div class="container">
-            
-            <!-- Grid de 6 guías con jerarquía -->
-            <div class="guias-grid-new" id="guias-grid">
+<section class="guias-main-new">
+    <div class="container">
+        
+        <!-- Grid de 6 guías con jerarquía -->
+        <div class="guias-grid-new" id="guias-grid">
 
-                <!-- Guía 1: Familias Olfativas -->
-                <article class="guia-card-new">
-                    <div class="guia-number">01</div>
-                    <div class="guia-icon">🌸</div>
-                    <h3 class="guia-title">Familias Olfativas</h3>
-                    <p class="guia-description">
-                        Conoce las diferentes familias olfativas y aprende a identificar 
-                        las notas que define cada tipo de fragancia.
-                    </p>
-                    <button class="guia-cta">Leer más →</button>
-                </article>
-
-                <!-- Guía 2: Tipos de Concentración -->
-                <article class="guia-card-new">
-                    <div class="guia-number">02</div>
-                    <div class="guia-icon">💧</div>
-                    <h3 class="guia-title">Tipos de Concentración</h3>
-                    <p class="guia-description">
-                        Aprende la diferencia entre eau de toilette, eau de parfum y perfume, 
-                        y cuál se adapta mejor a tus gustos.
-                    </p>
-                    <button class="guia-cta">Leer más →</button>
-                </article>
-
-                <!-- Guía 3: DESTACADA - Cómo Elegir -->
-                <article class="guia-card-new guia-card-featured">
-                    <div class="guia-featured-badge">Destacada</div>
-                    <div class="guia-number">03</div>
-                    <div class="guia-icon guia-icon-large">✨</div>
-                    <h3 class="guia-title guia-title-large">Cómo Elegir tu<br>Perfume Ideal</h3>
-                    <p class="guia-description">
-                        Encuentra la fragancia perfecta para ti según tu personalidad, 
-                        estilo y ocasión. Te guiamos paso a paso en tu elección.
-                    </p>
-                    <button class="guia-cta guia-cta-featured">Leer más →</button>
-                </article>
-
-                <!-- Guía 4: Perfumes Según la Ocasión -->
-                <article class="guia-card-new">
-                    <div class="guia-number">04</div>
-                    <div class="guia-icon">🌙</div>
-                    <h3 class="guia-title">Perfumes Según<br>la Ocasión</h3>
-                    <p class="guia-description">
-                        Descubre cómo elegir la fragancia adecuada para cada momento: 
-                        trabajo, citas, eventos especiales y más.
-                    </p>
-                    <button class="guia-cta">Leer más →</button>
-                </article>
-
-                <!-- Guía 5: Cómo Aplicar -->
-                <article class="guia-card-new">
-                    <div class="guia-number">05</div>
-                    <div class="guia-icon">✨</div>
-                    <h3 class="guia-title">Cómo Aplicar<br>Correctamente</h3>
-                    <p class="guia-description">
-                        Domina el arte de aplicar tu perfume para maximizar su duración 
-                        y proyección.
-                    </p>
-                    <button class="guia-cta">Leer más →</button>
-                </article>
-
-                <!-- Guía 6: Conservación -->
-                <article class="guia-card-new">
-                    <div class="guia-number">06</div>
-                    <div class="guia-icon">🏺</div>
-                    <h3 class="guia-title">Cómo Conservar<br>tus Perfumes</h3>
-                    <p class="guia-description">
-                        Conoce para almacenar y mantener tus fragancias frescas y 
-                        efectivas por más tiempo.
-                    </p>
-                    <button class="guia-cta">Leer más →</button>
-                </article>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CTA Final Mejorado -->
-    <section class="guias-cta-new">
-        <div class="container">
-            <div class="guias-cta-content-new">
-                <div class="guias-cta-icon">💎</div>
-                <h2 class="guias-cta-title-new">
-                    ¿Listo para Encontrar tu<br>Fragancia Perfecta?
-                </h2>
-                <p class="guias-cta-text-new">
-                    Explora nuestras guías y elige la fragancia que mejor se adapta a ti.
+            <!-- Guía 1: Familias Olfativas -->
+            <article class="guia-card-new" data-guia="familias">
+                <div class="guia-number">01</div>
+                <div class="guia-icon">🌸</div>
+                <h3 class="guia-title">Familias Olfativas</h3>
+                <p class="guia-description">
+                    Conoce las diferentes familias olfativas y aprende a identificar 
+                    las notas que define cada tipo de fragancia.
                 </p>
-                <a href="catalogo.html" class="btn btn-primary btn-cta-large">
-                    Descubrir Mi Aroma Ideal
-                </a>
-            </div>
+                <button class="guia-cta" data-guia="familias">Leer más →</button>
+            </article>
+
+            <!-- Guía 2: Tipos de Concentración -->
+            <article class="guia-card-new" data-guia="concentracion">
+                <div class="guia-number">02</div>
+                <div class="guia-icon">💧</div>
+                <h3 class="guia-title">Tipos de Concentración</h3>
+                <p class="guia-description">
+                    Aprende la diferencia entre eau de toilette, eau de parfum y perfume, 
+                    y cuál se adapta mejor a tus gustos.
+                </p>
+                <button class="guia-cta" data-guia="concentracion">Leer más →</button>
+            </article>
+
+            <!-- Guía 3: DESTACADA - Cómo Elegir -->
+            <article class="guia-card-new guia-card-featured" data-guia="elegir">
+                <div class="guia-featured-badge">Destacada</div>
+                <div class="guia-number">03</div>
+                <div class="guia-icon guia-icon-large">✨</div>
+                <h3 class="guia-title guia-title-large">Cómo Elegir tu<br>Perfume Ideal</h3>
+                <p class="guia-description">
+                    Encuentra la fragancia perfecta para ti según tu personalidad, 
+                    estilo y ocasión. Te guiamos paso a paso en tu elección.
+                </p>
+                <button class="guia-cta guia-cta-featured" data-guia="elegir">Leer más →</button>
+            </article>
+
+            <!-- Guía 4: Cómo Aplicar -->
+            <article class="guia-card-new" data-guia="aplicar">
+                <div class="guia-number">04</div>
+                <div class="guia-icon">✨</div>
+                <h3 class="guia-title">Cómo Aplicar<br>Correctamente</h3>
+                <p class="guia-description">
+                    Domina el arte de aplicar tu perfume para maximizar su duración 
+                    y proyección.
+                </p>
+                <button class="guia-cta" data-guia="aplicar">Leer más →</button>
+            </article>
+
+            <!-- Guía 5: Conservación  -->
+<article class="guia-card-new" data-guia="conservar">
+    <div class="guia-number">05</div>
+    <div class="guia-icon">🏺</div>
+    <h3 class="guia-title">Cómo Conservar<br>tus Perfumes</h3>
+    <p class="guia-description">
+        Conoce cómo almacenar y mantener tus fragancias frescas y 
+        efectivas por más tiempo.
+    </p>
+    <button class="guia-cta" data-guia="conservar">Leer más →</button>
+</article>
+
+            <!-- Guía 6: Perfumes Según la Ocasión  -->
+<article class="guia-card-new" data-guia="ocasion">
+    <div class="guia-number">06</div>
+    <div class="guia-icon">🌙</div>
+    <h3 class="guia-title">Perfumes Según<br>la Ocasión</h3>
+    <p class="guia-description">
+        Descubre cómo elegir la fragancia adecuada para cada momento: 
+        trabajo, citas, eventos especiales y más.
+    </p>
+    <button class="guia-cta" data-guia="ocasion">Leer más →</button>
+</article>
+
         </div>
-    </section>
+
+    </div>
+</section>
+
+<!-- CTA Final  -->
+<section class="guias-cta-new">
+    <div class="container">
+        <div class="guias-cta-divider"></div>
+        <div class="guias-cta-content-new">
+            <div class="guias-cta-icon">💎</div>
+            <h2 class="guias-cta-title-new">
+                ¿Listo para Encontrar tu<br>Fragancia Perfecta?
+            </h2>
+            <p class="guias-cta-text-new">
+                Explora nuestras guías y elige la fragancia que mejor se adapta a ti.
+            </p>
+        </div>
+        <div class="guias-cta-button-container">
+            <a href="catalogo.html" class="btn-cta-final">
+                <span class="btn-cta-final-text">Descubrir Mi Aroma Ideal</span>
+                <span class="btn-cta-final-arrow">→</span>
+            </a>
+        </div>
+    </div>
+</section>
 
 </main>
 
@@ -264,8 +268,9 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script type="module" src="js/header.js"></script>
+   <!-- Scripts -->
+<script type="module" src="js/header.js"></script>
+<script type="module" src="js/pages/GuiasPages.js"></script>
 
 </body>
 </html>
