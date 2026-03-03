@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preguntas Frecuentes - Del Plata Fragancias. Encuentra respuestas sobre envíos, pagos, devoluciones y productos.">
+    <title>Preguntas Frecuentes | Del Plata Fragancias</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/iconoDPF.png" />
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header-main">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <ul class="navbar-menu navbar-menu-left">
+                    <li class="navbar-item">
+                        <a href="index.html" class="navbar-link">Inicio</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="catalogo.html" class="navbar-link">Catálogo</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="guias.html" class="navbar-link">Guías</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-brand">
+                    <a href="index.html" class="brand-link">
+                        <h1 class="brand-title">DEL PLATA</h1>
+                        <h2 class="brand-subtitle">FRAGANCIAS</h2>
+                    </a>
+                </div>
+
+                <ul class="navbar-menu navbar-menu-right">
+                    <li class="navbar-item">
+                        <a href="contacto.html" class="navbar-link">Contacto</a>
+                    </li>
+                    <li class="navbar-item navbar-item-account">
+                        <a href="login.html" class="navbar-link navbar-link-account">Mi Cuenta</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-cart">
+                    <button class="cart-link" aria-label="Abrir carrito">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+
+                <button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menú">
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Hero Section -->
+        <section class="faq-hero">
+            <div class="container">
+                <div class="faq-hero-content">
+                    <h1 class="faq-hero-title">Preguntas Frecuentes</h1>
+                    <p class="faq-hero-subtitle">
+                        Encuentra respuestas rápidas a las consultas más comunes sobre nuestros productos y servicios
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Categories -->
+        <section class="faq-main">
+            <div class="container">
+
+                <!-- Categoría: Envíos -->
+                <div class="faq-category">
+                    <div class="faq-category-header">
+                        <div class="faq-category-icon">📦</div>
+                        <h2 class="faq-category-title">Envíos</h2>
+                    </div>
+
+                    <div class="faq-accordion">
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Hacen envíos a todo Uruguay?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Sí, realizamos envíos a todo el territorio uruguayo. Llegamos a Montevideo 
+                                    y a todo el interior del país con envíos seguros y rastreables.
+                                </p>
+                                <ul>
+                                    <li><strong>Montevideo:</strong> 24-48 horas hábiles</li>
+                                    <li><strong>Interior:</strong> 3-5 días hábiles</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Cuánto cuesta el envío?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    El costo de envío varía según la zona de destino:
+                                </p>
+                                <ul>
+                                    <li><strong>Montevideo:</strong> $U 200</li>
+                                    <li><strong>Canelones y Ciudad de la Costa:</strong> $U 250</li>
+                                    <li><strong>Interior:</strong> $U 350</li>
+                                    <li><strong>Envío gratis:</strong> Compras superiores a $U 5.000</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Puedo rastrear mi pedido?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Sí, una vez despachado tu pedido, recibirás un email con el número de seguimiento. 
+                                    Podrás rastrear tu paquete en tiempo real a través de la empresa de correo.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Qué pasa si no estoy en casa al momento de la entrega?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    El correo dejará un aviso de visita con instrucciones para coordinar una nueva entrega 
+                                    o retirarlo en la sucursal más cercana. También puedes contactarnos para coordinar directamente.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Categoría: Pagos -->
+                <div class="faq-category">
+                    <div class="faq-category-header">
+                        <div class="faq-category-icon">💳</div>
+                        <h2 class="faq-category-title">Pagos</h2>
+                    </div>
+
+                    <div class="faq-accordion">
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Qué métodos de pago aceptan?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Aceptamos múltiples formas de pago para tu comodidad:</p>
+                                <ul>
+                                    <li>Tarjetas de crédito (Visa, Mastercard, OCA)</li>
+                                    <li>Tarjetas de débito</li>
+                                    <li>Transferencia bancaria</li>
+                                    <li>Efectivo (solo en entregas en Montevideo)</li>
+                                    <li>MercadoPago</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Puedo pagar en cuotas?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Sí, aceptamos pagos en cuotas con tarjetas de crédito:
+                                </p>
+                                <ul>
+                                    <li>Hasta 3 cuotas sin recargo</li>
+                                    <li>De 4 a 6 cuotas con recargo según la tarjeta</li>
+                                    <li>Consulta con tu banco las opciones disponibles</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Es seguro comprar en su sitio?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Totalmente. Utilizamos conexiones seguras SSL y no almacenamos información 
+                                    de tarjetas. Todos los pagos son procesados a través de plataformas certificadas 
+                                    que cumplen con los más altos estándares de seguridad.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Categoría: Cambios y Devoluciones -->
+                <div class="faq-category">
+                    <div class="faq-category-header">
+                        <div class="faq-category-icon">🔄</div>
+                        <h2 class="faq-category-title">Cambios y Devoluciones</h2>
+                    </div>
+
+                    <div class="faq-accordion">
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Puedo devolver un producto?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Sí, aceptamos devoluciones dentro de los <strong>30 días</strong> posteriores 
+                                    a la compra, siempre que el producto:
+                                </p>
+                                <ul>
+                                    <li>Esté sin abrir y en su empaque original</li>
+                                    <li>No haya sido usado</li>
+                                    <li>Incluya todos los sellos y etiquetas</li>
+                                    <li>Cuente con el comprobante de compra</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Cómo solicito un cambio?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Para solicitar un cambio:</p>
+                                <ol>
+                                    <li>Contáctanos por email o WhatsApp</li>
+                                    <li>Indica el número de orden y el motivo del cambio</li>
+                                    <li>Te enviaremos las instrucciones de devolución</li>
+                                    <li>Una vez recibido y verificado, enviamos el nuevo producto</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Quién paga el costo de devolución?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Depende del motivo:
+                                </p>
+                                <ul>
+                                    <li><strong>Producto defectuoso o error nuestro:</strong> Nosotros pagamos el envío</li>
+                                    <li><strong>Cambio de opinión:</strong> El costo corre por cuenta del cliente</li>
+                                    <li><strong>Producto incorrecto:</strong> Nosotros pagamos el envío</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Cuánto demora el reembolso?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Una vez recibido y aprobado el producto devuelto, procesamos el reembolso 
+                                    en un plazo de 5-7 días hábiles. El dinero se acreditará al mismo medio 
+                                    de pago utilizado en la compra.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Categoría: Productos -->
+                <div class="faq-category">
+                    <div class="faq-category-header">
+                        <div class="faq-category-icon">✨</div>
+                        <h2 class="faq-category-title">Productos</h2>
+                    </div>
+
+                    <div class="faq-accordion">
+                        
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Los productos son originales?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Sí, <strong>todos nuestros productos son 100% originales</strong> y 
+                                    auténticos. Trabajamos directamente con distribuidores autorizados 
+                                    y ofrecemos garantía de autenticidad en cada compra.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Los perfumes tienen fecha de vencimiento?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Los perfumes no tienen fecha de vencimiento estricta, pero su calidad 
+                                    óptima se mantiene por 3-5 años si se conservan correctamente (en lugar 
+                                    fresco, oscuro y con la tapa bien cerrada). Todos nuestros productos 
+                                    son recientes y en perfectas condiciones.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Puedo solicitar una muestra antes de comprar?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Actualmente no enviamos muestras gratuitas, pero ofrecemos asesoramiento 
+                                    personalizado para ayudarte a elegir la fragancia perfecta según tus 
+                                    preferencias. También puedes consultar nuestras guías de fragancias.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span class="faq-question-text">¿Tienen stock de todos los productos publicados?</span>
+                                <span class="faq-question-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Actualizamos nuestro stock constantemente. Si un producto aparece 
+                                    disponible en el sitio, significa que tenemos stock. En casos excepcionales 
+                                    donde se agote justo después de tu compra, te contactaremos de inmediato 
+                                    para ofrecerte alternativas o el reembolso total.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+<section class="faq-cta-new">
+    <div class="container">
+        <div class="faq-cta-divider"></div>
+        <div class="faq-cta-content-new">
+            <div class="faq-cta-icon">💬</div>
+            <h2 class="faq-cta-title-new">
+                ¿No Encontraste lo que<br>Buscabas?
+            </h2>
+            <p class="faq-cta-text-new">
+                Nuestro equipo está disponible para ayudarte con cualquier consulta
+            </p>
+        </div>
+        <div class="faq-cta-button-container">
+            <a href="contacto.html" class="btn-cta-final">
+                <span class="btn-cta-final-text">Contáctanos Directamente</span>
+                <span class="btn-cta-final-arrow">→</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-container">            
+            <div class="footer-column footer-column-links">
+                <h4 class="footer-column-title">Del Plata Fragancias</h4>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="nosotros.html" class="footer-link">Nosotros</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="catalogo.html" class="footer-link">Catálogo</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="contacto.html" class="footer-link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-column-customer">
+                <h4 class="footer-column-title">Atención al Cliente</h4>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="faq.html" class="footer-link">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="envios-devoluciones.html" class="footer-link">Envíos y Devoluciones</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="politica-privacidad.html" class="footer-link">Política de Privacidad</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-column-about">
+                <h4 class="footer-column-title">Síguenos</h4>
+                <div class="footer-social">
+                    <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/facebook.png" alt="Icono de Facebook"></span>
+                    </a>
+                    <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/instagram.png" alt="Icono de Instagram"></span>
+                    </a>
+                    <a href="https://twitter.com" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/TwitterIcono.png" alt="Icono de Twitter"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-column-subscribe">
+                <h4 class="footer-column-title">Suscríbete</h4>
+                <p class="footer-text footer-text-small">
+                    Recibe nuestras novedades
+                </p>
+                <form class="footer-newsletter-form" id="newsletterForm" action="#" method="post">
+                    <div class="form-group">
+                        <input type="email" id="newsletterEmail" name="email" class="form-input footer-input" placeholder="E-mail adress" required aria-label="Correo electrónico para newsletter">
+                        <button type="submit" class="btn btn-primary btn-newsletter-footer">Suscribirme</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="footer-copyright">
+                    &copy; 2026 Del Plata Fragancias. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/pages/FaqPages.js"></script>
+
+</body>
+</html>
