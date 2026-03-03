@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Información sobre envíos y devoluciones - Del Plata Fragancias. Conoce nuestros tiempos de entrega y política de devoluciones.">
+    <title>Envíos y Devoluciones | Del Plata Fragancias</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/legal.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header-main">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <ul class="navbar-menu navbar-menu-left">
+                    <li class="navbar-item">
+                        <a href="index.html" class="navbar-link">Inicio</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="catalogo.html" class="navbar-link">Catálogo</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="guias.html" class="navbar-link">Guías</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-brand">
+                    <a href="index.html" class="brand-link">
+                        <h1 class="brand-title">DEL PLATA</h1>
+                        <h2 class="brand-subtitle">FRAGANCIAS</h2>
+                    </a>
+                </div>
+
+                <ul class="navbar-menu navbar-menu-right">
+                    <li class="navbar-item">
+                        <a href="contacto.html" class="navbar-link">Contacto</a>
+                    </li>
+                    <li class="navbar-item navbar-item-account">
+                        <a href="login.html" class="navbar-link navbar-link-account">Mi Cuenta</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-cart">
+                    <button class="cart-link" aria-label="Abrir carrito">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+
+                <button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menú">
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="navbar-toggle-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Hero Section -->
+        <section class="legal-hero">
+            <div class="container">
+                <div class="legal-hero-content">
+                    <h1 class="legal-hero-title">Envíos y Devoluciones</h1>
+                    <p class="legal-hero-subtitle">
+                        Información clara sobre nuestros procesos de envío y política de devoluciones
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Envíos Section -->
+        <section class="legal-section">
+            <div class="container">
+                <div class="legal-content">
+                    
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">📦</div>
+                        <h2 class="legal-section-title">Envíos</h2>
+                    </div>
+
+                    <!-- Zonas de Envío -->
+                    <div class="legal-block">
+                        <h3 class="legal-block-title">Zonas de Envío</h3>
+                        <p class="legal-text">
+                            Realizamos envíos a todo el territorio uruguayo, tanto en Montevideo como en el interior del país.
+                        </p>
+                    </div>
+
+                    <!-- Grid de Tiempos y Costos -->
+                    <div class="shipping-grid">
+                        
+                        <div class="shipping-card">
+                            <div class="shipping-card-icon">🏙️</div>
+                            <h4 class="shipping-card-title">Montevideo</h4>
+                            <div class="shipping-card-detail">
+                                <span class="shipping-label">Tiempo de entrega:</span>
+                                <span class="shipping-value">24-48 horas hábiles</span>
+                            </div>
+                            <div class="shipping-card-detail">
+                                <span class="shipping-label">Costo:</span>
+                                <span class="shipping-value">$U 200</span>
+                            </div>
+                        </div>
+
+                        <div class="shipping-card">
+                            <div class="shipping-card-icon">🌆</div>
+                            <h4 class="shipping-card-title">Canelones / Ciudad de la Costa</h4>
+                            <div class="shipping-card-detail">
+                                <span class="shipping-label">Tiempo de entrega:</span>
+                                <span class="shipping-value">2-4 días hábiles</span>
+                            </div>
+                            <div class="shipping-card-detail">
+                                <span class="shipping-label">Costo:</span>
+                                <span class="shipping-value">$U 250</span>
+                            </div>
+                        </div>
+
+                        <div class="shipping-card">
+                            <div class="shipping-card-icon">🏞️</div>
+                            <h4 class="shipping-card-title">Interior del País</h4>
+                            <div class="shipping-card-detail">
+                                <span class="shipping-label">Tiempo de entrega:</span>
+                                <span class="shipping-value">3-5 días hábiles</span>
+                            </div>
+                            <div class="shipping-card-detail">
+                                <span class="shipping-label">Costo:</span>
+                                <span class="shipping-value">$U 350</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Envío Gratis -->
+                    <div class="legal-highlight">
+                        <div class="legal-highlight-icon">🎁</div>
+                        <div class="legal-highlight-content">
+                            <h4 class="legal-highlight-title">Envío Gratis</h4>
+                            <p class="legal-highlight-text">
+                                En compras superiores a <strong>$U 5.000</strong>, el envío es totalmente gratis 
+                                a cualquier destino de Uruguay.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Proceso de Preparación -->
+                    <div class="legal-block">
+                        <h3 class="legal-block-title">Proceso de Preparación del Pedido</h3>
+                        <ol class="legal-list">
+                            <li>
+                                <strong>Confirmación:</strong> Una vez confirmado tu pago, recibirás un email de confirmación 
+                                con los detalles de tu pedido.
+                            </li>
+                            <li>
+                                <strong>Preparación:</strong> Preparamos tu pedido con cuidado, verificando que cada producto 
+                                esté en perfectas condiciones.
+                            </li>
+                            <li>
+                                <strong>Empaquetado:</strong> Embalamos tu pedido de forma segura para garantizar que llegue 
+                                en perfecto estado.
+                            </li>
+                            <li>
+                                <strong>Despacho:</strong> Una vez despachado, recibirás el número de seguimiento por email.
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- Seguimiento -->
+                    <div class="legal-block">
+                        <h3 class="legal-block-title">Seguimiento del Pedido</h3>
+                        <p class="legal-text">
+                            Una vez que tu pedido haya sido despachado, recibirás un email con el número de seguimiento 
+                            y un enlace para rastrear tu paquete en tiempo real a través de la empresa de correo.
+                        </p>
+                        <p class="legal-text">
+                            Si tienes alguna consulta sobre tu envío, no dudes en contactarnos por email o WhatsApp.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Devoluciones Section -->
+        <section class="legal-section legal-section-alt">
+            <div class="container">
+                <div class="legal-content">
+                    
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">🔄</div>
+                        <h2 class="legal-section-title">Cambios y Devoluciones</h2>
+                    </div>
+
+                    <!-- Plazo -->
+                    <div class="legal-block">
+                        <h3 class="legal-block-title">Plazo para Solicitar Devolución</h3>
+                        <p class="legal-text">
+                            Aceptamos devoluciones dentro de los <strong>30 días</strong> posteriores a la recepción 
+                            de tu pedido.
+                        </p>
+                    </div>
+
+                    <!-- Condiciones -->
+                    <div class="legal-block">
+                        <h3 class="legal-block-title">Condiciones del Producto</h3>
+                        <p class="legal-text">
+                            Para que tu devolución sea aceptada, el producto debe cumplir con las siguientes condiciones:
+                        </p>
+                        <ul class="legal-list">
+                            <li>El producto debe estar <strong>sin abrir y sin usar</strong>.</li>
+                            <li>Debe conservar su <strong>empaque original</strong> en perfectas condiciones.</li>
+                            <li>Debe incluir todos los <strong>sellos, etiquetas y accesorios</strong> originales.</li>
+                            <li>Debes presentar el <strong>comprobante de compra</strong>.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Proceso -->
+                    <div class="legal-block">
+                        <h3 class="legal-block-title">Proceso para Solicitar Cambio o Devolución</h3>
+                        <ol class="legal-list">
+                            <li>
+                                <strong>Contacto:</strong> Envíanos un email a 
+                                <a href="mailto:contacto@delplata.com" class="legal-link">contacto@delplata.com</a> 
+                                o contáctanos por WhatsApp.
+                            </li>
+                            <li>
+                                <strong>Información:</strong> Indica tu número de orden y el motivo del cambio o devolución.
+                            </li>
+                            <li>
+                                <strong>Instrucciones:</strong> Te enviaremos las instrucciones detalladas para devolver el producto.
+                            </li>
+                            <li>
+                                <strong>Verificación:</strong> Una vez recibido y verificado el producto, procesaremos tu cambio 
+                                o reembolso.
+                            </li>
+                            <li>
+                                <strong>Reembolso:</strong> El reembolso se acreditará al mismo medio de pago utilizado en la compra 
+                                en un plazo de 5-7 días hábiles.
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- Costos de Devolución -->
+                    <div class="legal-block">
+                        <h3 class="legal-block-title">Costos de Devolución</h3>
+                        <ul class="legal-list">
+                            <li>
+                                <strong>Producto defectuoso o error nuestro:</strong> Nosotros nos hacemos cargo del costo de envío.
+                            </li>
+                            <li>
+                                <strong>Cambio de opinión:</strong> El costo del envío de devolución corre por cuenta del cliente.
+                            </li>
+                            <li>
+                                <strong>Producto incorrecto:</strong> Nosotros nos hacemos cargo del costo de envío.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Excepciones -->
+                    <div class="legal-warning">
+                        <div class="legal-warning-icon">⚠️</div>
+                        <div class="legal-warning-content">
+                            <h4 class="legal-warning-title">Casos en los que NO Aplica Devolución</h4>
+                            <ul class="legal-list">
+                                <li>Productos que hayan sido abiertos, usados o probados.</li>
+                                <li>Productos sin su empaque original o con el empaque dañado.</li>
+                                <li>Productos sin sellos, etiquetas o en mal estado.</li>
+                                <li>Devoluciones solicitadas después del plazo de 30 días.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="legal-cta">
+            <div class="container">
+                <div class="legal-cta-divider"></div>
+                <div class="legal-cta-content">
+                    <div class="legal-cta-icon">💬</div>
+                    <h2 class="legal-cta-title">¿Necesitas Ayuda con tu Pedido?</h2>
+                    <p class="legal-cta-text">
+                        Nuestro equipo está disponible para resolver cualquier duda sobre envíos o devoluciones
+                    </p>
+                </div>
+                <div class="legal-cta-button-container">
+                    <a href="contacto.html" class="btn-legal-cta">
+                        <span class="btn-legal-cta-text">Contáctanos</span>
+                        <span class="btn-legal-cta-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-main">
+        <div class="footer-container">            
+            <div class="footer-column footer-column-links">
+                <h4 class="footer-column-title">Del Plata Fragancias</h4>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="nosotros.html" class="footer-link">Nosotros</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="catalogo.html" class="footer-link">Catálogo</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="contacto.html" class="footer-link">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-column-customer">
+                <h4 class="footer-column-title">Atención al Cliente</h4>
+                <ul class="footer-list">
+                    <li class="footer-list-item">
+                        <a href="faq.html" class="footer-link">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="envios-devoluciones.html" class="footer-link">Envíos y Devoluciones</a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="politica-privacidad.html" class="footer-link">Política de Privacidad</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-column-about">
+                <h4 class="footer-column-title">Síguenos</h4>
+                <div class="footer-social">
+                    <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/facebook.png" alt="Icono de Facebook"></span>
+                    </a>
+                    <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/instagram.png" alt="Icono de Instagram"></span>
+                    </a>
+                    <a href="https://twitter.com" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                        <span class="social-icon"><img src="assets/img/TwitterIcono.png" alt="Icono de Twitter"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-column footer-column-subscribe">
+                <h4 class="footer-column-title">Suscríbete</h4>
+                <p class="footer-text footer-text-small">
+                    Recibe nuestras novedades
+                </p>
+                <form class="footer-newsletter-form" id="newsletterForm" action="#" method="post">
+                    <div class="form-group">
+                        <input type="email" id="newsletterEmail" name="email" class="form-input footer-input" placeholder="E-mail adress" required aria-label="Correo electrónico para newsletter">
+                        <button type="submit" class="btn btn-primary btn-newsletter-footer">Suscribirme</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="footer-copyright">
+                    &copy; 2026 Del Plata Fragancias. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/header.js"></script>
+
+</body>

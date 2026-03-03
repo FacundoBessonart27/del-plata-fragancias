@@ -1766,6 +1766,26 @@
     .contacto-faq-link-text-new {
         font-size: var(--font-size-base);
     }
+    .contacto-faq-cta {
+        padding: var(--spacing-4xl) 0;
+    }
+
+    .contacto-faq-icon {
+        font-size: 48px;
+    }
+
+    .contacto-faq-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .contacto-faq-text {
+        font-size: var(--font-size-base);
+    }
+
+    .btn-contacto-faq {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-md) var(--spacing-2xl);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1820,6 +1840,17 @@
 
     .contacto-hero-title {
         font-size: var(--font-size-2xl);
+    }
+    .contacto-faq-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .contacto-faq-text {
+        font-size: var(--font-size-sm);
+    }
+
+    .btn-contacto-faq-text {
+        font-size: var(--font-size-sm);
     }
 }
 

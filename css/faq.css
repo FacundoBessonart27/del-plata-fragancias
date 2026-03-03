@@ -73,10 +73,12 @@
 .faq-category {
     max-width: 900px;
     margin: 0 auto var(--spacing-5xl);
+    padding-bottom: var(--spacing-3xl); 
 }
 
 .faq-category:last-child {
     margin-bottom: 0;
+    padding-bottom: var(--spacing-4xl); 
 }
 
 .faq-category-header {
