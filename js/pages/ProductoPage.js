@@ -32,6 +32,9 @@ class ProductoPage {
                 return;
             }
             
+            // 3. Actualizar título de la página
+            this.updatePageTitle();
+
             // 3. Renderizar todo
             this.render();
             
@@ -59,6 +62,28 @@ class ProductoPage {
         this.renderDescripcion();
         this.renderRelatedProducts();
     }
+
+/**Actualiza el título de la página dinámicamente*/ 
+
+    updatePageTitle() {
+        // Actualizar <title> del documento
+        document.title = `${this.producto.nombre} - ${this.producto.marca} | Del Plata Fragancias`;
+        
+        // Actualizar meta description para SEO
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', 
+                `Compra ${this.producto.nombre} de ${this.producto.marca}. ${this.producto.descripcionCorta || this.producto.descripcion}`
+            );
+        } else {
+            // Crear meta description si no existe
+            const meta = document.createElement('meta');
+            meta.name = 'description';
+            meta.content = `Compra ${this.producto.nombre} de ${this.producto.marca}. ${this.producto.descripcionCorta || this.producto.descripcion}`;
+            document.head.appendChild(meta);
+        }
+    }
+
 
     /**
      * Renderizar breadcrumb

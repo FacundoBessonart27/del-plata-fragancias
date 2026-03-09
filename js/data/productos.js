@@ -19,12 +19,12 @@ export const PRODUCTOS = [
             fondo: ['Vainilla', 'Pachulí', 'Cedro']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/BlackOpium.jpg',
+            principal: '../assets/img/CatalogoIMG/BlackOpium.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/BlackOpium.jpg',
-                'assets/img/CatalogoIMG/BlackOpium2.jpg',
-                'assets/img/CatalogoIMG/BlackOpium3.jpg',
-                'assets/img/CatalogoIMG/BlackOpium4.jpg'
+                '../assets/img/CatalogoIMG/BlackOpium.jpg',
+                '../assets/img/CatalogoIMG/BlackOpium2.jpg',
+                '../assets/img/CatalogoIMG/BlackOpium3.jpg',
+                '../assets/img/CatalogoIMG/BlackOpium4.jpg'
             ]
         },
         stock: 15,
@@ -52,12 +52,12 @@ export const PRODUCTOS = [
             fondo: ['Ambroxán', 'Cedro', 'Labdanum']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/DiorSauvageEDT.jpg',
+            principal: '../assets/img/CatalogoIMG/DiorSauvageEDT.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/DiorSauvageEDT.jpg',
-                'assets/img/CatalogoIMG/DiorSauvageEDT2.jpg',
-                'assets/img/CatalogoIMG/DiorSauvageEDT3.jpg',
-                'assets/img/CatalogoIMG/DiorSauvageEDT4.jpg'
+                '../assets/img/CatalogoIMG/DiorSauvageEDT.jpg',
+                '../assets/img/CatalogoIMG/DiorSauvageEDT2.jpg',
+                '../assets/img/CatalogoIMG/DiorSauvageEDT3.jpg',
+                '../assets/img/CatalogoIMG/DiorSauvageEDT4.jpg'
             ]
         },
         stock: 20,
@@ -85,12 +85,12 @@ export const PRODUCTOS = [
             fondo: ['Pachulí', 'Vainilla', 'Vetiver']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/ChannelCoco.jpg',
+            principal: '../assets/img/CatalogoIMG/ChannelCoco.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/ChannelCoco.jpg',
-                'assets/img/CatalogoIMG/ChannelCoco2.jpg',
-                'assets/img/CatalogoIMG/ChannelCoco3.jpg',
-                'assets/img/CatalogoIMG/ChannelCoco4.jpg'
+                '../assets/img/CatalogoIMG/ChannelCoco.jpg',
+                '../assets/img/CatalogoIMG/ChannelCoco2.jpg',
+                '../assets/img/CatalogoIMG/ChannelCoco3.jpg',
+                '../assets/img/CatalogoIMG/ChannelCoco4.jpg'
             ]
         },
         stock: 10,
@@ -118,12 +118,12 @@ export const PRODUCTOS = [
             fondo: ['Ámbar', 'Cuero', 'Madera']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/1MillionPacoRabbane.jpg',
+            principal: '../assets/img/CatalogoIMG/1MillionPacoRabbane.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/1MillionPacoRabbane.jpg',
-                'assets/img/CatalogoIMG/1MillionPacoRabbane2.jpg',
-                'assets/img/CatalogoIMG/1MillionPacoRabbane3.jpg',
-                'assets/img/CatalogoIMG/1MillionPacoRabbane4.jpg'
+                '../assets/img/CatalogoIMG/1MillionPacoRabbane.jpg',
+                '../assets/img/CatalogoIMG/1MillionPacoRabbane2.jpg',
+                '../assets/img/CatalogoIMG/1MillionPacoRabbane3.jpg',
+                '../assets/img/CatalogoIMG/1MillionPacoRabbane4.jpg'
             ]
         },
         stock: 8,
@@ -151,12 +151,12 @@ export const PRODUCTOS = [
             fondo: ['Tonka', 'Cacao', 'Vainilla', 'Sándalo']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/CarolinaHerraraGoodGirl.jpg',
+            principal: '../assets/img/CatalogoIMG/CarolinaHerraraGoodGirl.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/CarolinaHerraraGoodGirl.jpg',
-                'assets/img/CatalogoIMG/CarolinaHerraraGoodGirl2.jpg',
-                'assets/img/CatalogoIMG/CarolinaHerraraGoodGirl3.jpg',
-                'assets/img/CatalogoIMG/CarolinaHerraraGoodGirl4.jpg'
+                '../assets/img/CatalogoIMG/CarolinaHerraraGoodGirl.jpg',
+                '../assets/img/CatalogoIMG/CarolinaHerraraGoodGirl2.jpg',
+                '../assets/img/CatalogoIMG/CarolinaHerraraGoodGirl3.jpg',
+                '../assets/img/CatalogoIMG/CarolinaHerraraGoodGirl4.jpg'
             ]
         },
         stock: 5,
@@ -184,12 +184,12 @@ export const PRODUCTOS = [
             fondo: ['Cedro de Virginia', 'Gamuza', 'Vetiver']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/lacosteBlanc.jpg',
+            principal: '../assets/img/CatalogoIMG/lacosteBlanc.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/lacosteBlanc.jpg',
-                'assets/img/CatalogoIMG/lacosteBlanc2.jpg',
-                'assets/img/CatalogoIMG/lacosteBlanc3.jpg',
-                'assets/img/CatalogoIMG/lacosteBlanc4.jpg'
+                '../assets/img/CatalogoIMG/lacosteBlanc.jpg',
+                '../assets/img/CatalogoIMG/lacosteBlanc2.jpg',
+                '../assets/img/CatalogoIMG/lacosteBlanc3.jpg',
+                '../assets/img/CatalogoIMG/lacosteBlanc4.jpg'
             ]
         },
         stock: 12,
@@ -217,12 +217,12 @@ export const PRODUCTOS = [
             fondo: ['Praliné', 'Vainilla', 'Pachulí', 'Tonka']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/LancomeLaVie.jpg',
+            principal: '../assets/img/CatalogoIMG/LancomeLaVie.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/LancomeLaVie.jpg',
-                'assets/img/CatalogoIMG/LancomeLaVie2.jpg',
-                'assets/img/CatalogoIMG/LancomeLaVie3.jpg',
-                'assets/img/CatalogoIMG/LancomeLaVie4.jpg'
+                '../assets/img/CatalogoIMG/LancomeLaVie.jpg',
+                '../assets/img/CatalogoIMG/LancomeLaVie2.jpg',
+                '../assets/img/CatalogoIMG/LancomeLaVie3.jpg',
+                '../assets/img/CatalogoIMG/LancomeLaVie4.jpg'
             ]
         },
         stock: 18,
@@ -250,12 +250,12 @@ export const PRODUCTOS = [
             fondo: ['Vainilla de Madagascar', 'Vetiver', 'Musgo de Roble', 'Cedro de Virginia']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/VersaceErosEDT.jpg',
+            principal: '../assets/img/CatalogoIMG/VersaceErosEDT.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/VersaceErosEDT.jpg',
-                'assets/img/CatalogoIMG/VersaceErosEDT2.jpg',
-                'assets/img/CatalogoIMG/VersaceErosEDT3.jpg',
-                'assets/img/CatalogoIMG/VersaceErosEDT4.jpg'
+                '../assets/img/CatalogoIMG/VersaceErosEDT.jpg',
+                '../assets/img/CatalogoIMG/VersaceErosEDT2.jpg',
+                '../assets/img/CatalogoIMG/VersaceErosEDT3.jpg',
+                '../assets/img/CatalogoIMG/VersaceErosEDT4.jpg'
             ]
         },
         stock: 16,
@@ -283,12 +283,12 @@ export const PRODUCTOS = [
             fondo: ['Vainilla', 'Cedro', 'Almizcle Blanco']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/giorgioArmaniEDP.jpg',
+            principal: '../assets/img/CatalogoIMG/giorgioArmaniEDP.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/giorgioArmaniEDP.jpg',
-                'assets/img/CatalogoIMG/giorgioArmaniEDP2.jpg',
-                'assets/img/CatalogoIMG/giorgioArmaniEDP3.jpg',
-                'assets/img/CatalogoIMG/giorgioArmaniEDP4.jpg'
+                '../assets/img/CatalogoIMG/giorgioArmaniEDP.jpg',
+                '../assets/img/CatalogoIMG/giorgioArmaniEDP2.jpg',
+                '../assets/img/CatalogoIMG/giorgioArmaniEDP3.jpg',
+                '../assets/img/CatalogoIMG/giorgioArmaniEDP4.jpg'
             ]
         },
         stock: 14,
@@ -316,12 +316,12 @@ export const PRODUCTOS = [
             fondo: ['Incienso', 'Ámbar', 'Cedro', 'Sándalo', 'Pachulí', 'Labdanum']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/channelBleuEDP.jpg',
+            principal: '../assets/img/CatalogoIMG/channelBleuEDP.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/channelBleuEDP.jpg',
-                'assets/img/CatalogoIMG/channelBleuEDP2.jpg',
-                'assets/img/CatalogoIMG/channelBleuEDP3.jpg',
-                'assets/img/CatalogoIMG/channelBleuEDP4.jpg'
+                '../assets/img/CatalogoIMG/channelBleuEDP.jpg',
+                '../assets/img/CatalogoIMG/channelBleuEDP2.jpg',
+                '../assets/img/CatalogoIMG/channelBleuEDP3.jpg',
+                '../assets/img/CatalogoIMG/channelBleuEDP4.jpg'
             ]
         },
         stock: 9,
@@ -349,12 +349,12 @@ export const PRODUCTOS = [
             fondo: ['Ámbar Gris', 'Guayaco', 'Musgo de Roble', 'Pachulí']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/PagoRabaneInvictusEDT.jpg',
+            principal: '../assets/img/CatalogoIMG/PagoRabaneInvictusEDT.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/PagoRabaneInvictusEDT.jpg',
-                'assets/img/CatalogoIMG/PagoRabaneInvictusEDT2.jpg',
-                'assets/img/CatalogoIMG/PagoRabaneInvictusEDT3.jpg',
-                'assets/img/CatalogoIMG/PagoRabaneInvictusEDT4.jpg'
+                '../assets/img/CatalogoIMG/PagoRabaneInvictusEDT.jpg',
+                '../assets/img/CatalogoIMG/PagoRabaneInvictusEDT2.jpg',
+                '../assets/img/CatalogoIMG/PagoRabaneInvictusEDT3.jpg',
+                '../assets/img/CatalogoIMG/PagoRabaneInvictusEDT4.jpg'
             ]
         },
         stock: 11,
@@ -382,12 +382,12 @@ export const PRODUCTOS = [
             fondo: ['Iris', 'Almizcle Blanco', 'Tonka', 'Vainilla de Papúa']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/missDiorEDP.jpg',
+            principal: '../assets/img/CatalogoIMG/missDiorEDP.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/missDiorEDP.jpg',
-                'assets/img/CatalogoIMG/missDiorEDP2.jpg',
-                'assets/img/CatalogoIMG/missDiorEDP3.jpg',
-                'assets/img/CatalogoIMG/missDiorEDP4.jpg'
+                '../assets/img/CatalogoIMG/missDiorEDP.jpg',
+                '../assets/img/CatalogoIMG/missDiorEDP2.jpg',
+                '../assets/img/CatalogoIMG/missDiorEDP3.jpg',
+                '../assets/img/CatalogoIMG/missDiorEDP4.jpg'
             ]
         },
         stock: 13,
@@ -415,12 +415,12 @@ export const PRODUCTOS = [
             fondo: ['Tonka', 'Vainilla', 'Cuero', 'Ámbar']
         },
         imagenes: {
-            principal: 'assets/img/CatalogoIMG/ScandalElixir.jpg',
+            principal: '../assets/img/CatalogoIMG/ScandalElixir.jpg',
             galeria: [
-                'assets/img/CatalogoIMG/ScandalElixir.jpg',
-                'assets/img/CatalogoIMG/ScandalElixir2.jpg',
-                'assets/img/CatalogoIMG/ScandalElixir3.jpg',
-                'assets/img/CatalogoIMG/ScandalElixir4.jpg'
+                '../assets/img/CatalogoIMG/ScandalElixir.jpg',
+                '../assets/img/CatalogoIMG/ScandalElixir2.jpg',
+                '../assets/img/CatalogoIMG/ScandalElixir3.jpg',
+                '../assets/img/CatalogoIMG/ScandalElixir4.jpg'
             ]
         },
         stock: 7,

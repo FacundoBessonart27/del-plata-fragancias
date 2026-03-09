@@ -157,19 +157,80 @@ export class CartModal {
         const items = cartService.getItems();
 
         if (items.length === 0) {
-            container.innerHTML = CartUtils.renderEmptyCart();
+            container.innerHTML = this.renderEmptyCart();
             this.updateSummary(0, 0);
             return;
         }
 
         // Renderizar items
-        container.innerHTML = items.map(item => CartUtils.renderCartItem(item)).join('');
+        container.innerHTML = items.map(item => this.renderCartItem(item)).join('');
 
         // Actualizar totales
         const subtotal = cartService.getSubtotal();
         const total = cartService.getTotal();
         this.updateSummary(subtotal, total);
     }
+
+    /**
+     * Renderizar carrito vacío
+     */
+    renderEmptyCart() {
+        const basePath = this.getBasePath();
+        return `
+            <div class="cart-empty">
+                <p class="cart-empty-text">Tu carrito está vacío</p>
+                <a href="${basePath}pages/catalogo.html" class="btn btn-primary">Ver Catálogo</a>
+            </div>
+        `;
+    }
+
+    /**
+     * Renderizar item del carrito
+     */
+  renderCartItem(item) {
+    console.log('📦 Renderizando item:', item);
+    
+    // Obtener imagen de forma SEGURA
+    let imagePath = '';
+    
+    if (item.imagenes?.principal) {
+        imagePath = item.imagenes.principal;
+    } else if (item.imagen) {
+        imagePath = item.imagen;
+    } else {
+        console.error('❌ Item sin imagen:', item);
+        imagePath = 'assets/img/productos/default.jpg';
+    }
+    
+    const finalImagePath = this.getImagePath(imagePath);
+    const itemTotal = (item.precio || 0) * (item.cantidad || 1);
+    
+    return `
+        <div class="cart-item" data-product-id="${item.id}">
+            <div class="cart-item-image">
+                <img src="${finalImagePath}" 
+                     alt="${item.nombre || 'Producto'}" 
+                     onerror="console.error('Error imagen:', this.src); this.src='../assets/img/productos/default.jpg'">
+            </div>
+            <div class="cart-item-info">
+                <h4 class="cart-item-name">${item.nombre || 'Producto'}</h4>
+                <p class="cart-item-brand">${item.marca || ''}</p>
+                <p class="cart-item-price">${Currency.format(item.precio || 0)}</p>
+            </div>
+            <div class="cart-item-quantity">
+                <button class="quantity-btn" data-action="decrease">-</button>
+                <span class="quantity-value">${item.cantidad || 1}</span>
+                <button class="quantity-btn" data-action="increase">+</button>
+            </div>
+            <div class="cart-item-total">
+                ${Currency.format(itemTotal)}
+            </div>
+            <button class="cart-item-remove" data-action="remove">
+                <span class="remove-icon">×</span>
+            </button>
+        </div>
+    `;
+}
 
     /**
      * Actualizar resumen de totales
@@ -186,41 +247,71 @@ export class CartModal {
      * Manejar acciones de items (aumentar, disminuir, eliminar)
      */
     async handleItemAction(action, productId) {
-    const item = cartService.getItem(productId);
-    if (!item) return;
+        const item = cartService.getItem(productId);
+        if (!item) return;
 
-    switch(action) {
-        case 'increase':
-            cartService.updateQuantity(productId, item.cantidad + 1);
-            break;
-        case 'decrease':
-            cartService.updateQuantity(productId, item.cantidad - 1);
-            break;
-        case 'remove':
-            // Importar dinámicamente solo cuando se necesita
-            const { confirmModal } = await import('./ConfirmModal.js');
-            const confirmed = await confirmModal.show(item.nombre);
-            if (confirmed) {
-                cartService.removeItem(productId);
-                CartUtils.showNotification('Producto eliminado del carrito', 'info');
-            }
-            break;
+        switch(action) {
+            case 'increase':
+                cartService.updateQuantity(productId, item.cantidad + 1);
+                break;
+            case 'decrease':
+                cartService.updateQuantity(productId, item.cantidad - 1);
+                break;
+            case 'remove':
+                // Importar dinámicamente solo cuando se necesita
+                const { confirmModal } = await import('./ConfirmModal.js');
+                const confirmed = await confirmModal.show(item.nombre);
+                if (confirmed) {
+                    cartService.removeItem(productId);
+                    CartUtils.showNotification('Producto eliminado del carrito', 'info');
+                }
+                break;
+        }
     }
-}
 
     /**
      * Manejar checkout
      */
     handleCheckout() {
-    if (cartService.isEmpty()) {
-        CartUtils.showNotification('El carrito está vacío', 'warning');
-        return;
+        if (cartService.isEmpty()) {
+            CartUtils.showNotification('El carrito está vacío', 'warning');
+            return;
+        }
+
+        // Redirigir a checkout con ruta correcta
+        const basePath = this.getBasePath();
+        window.location.href = `${basePath}pages/checkout.html`;
     }
 
-    // Redirigir a checkout
-    console.log('✅ Redirigiendo a checkout...');
-    window.location.href = 'checkout.html';
-}
+    /**
+     * Obtener ruta base según ubicación actual
+     */
+    getBasePath() {
+        const currentPath = window.location.pathname;
+        
+        // Si estamos en /pages/, necesitamos subir un nivel
+        if (currentPath.includes('/pages/')) {
+            return '../';
+        }
+        
+        // Si estamos en la raíz, no necesitamos prefijo
+        return '';
+    }
+
+    /**
+     * Obtener ruta correcta de imagen según ubicación
+     */
+    getImagePath(imagePath) {
+        const currentPath = window.location.pathname;
+        
+        // Si estamos en /pages/, necesitamos subir un nivel para acceder a assets
+        if (currentPath.includes('/pages/')) {
+            return `../${imagePath}`;
+        }
+        
+        // Si estamos en la raíz, usar ruta directa
+        return imagePath;
+    }
 
     /**
      * Alternar visibilidad (abrir/cerrar)
