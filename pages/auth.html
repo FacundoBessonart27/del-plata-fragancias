@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inicia sesión o crea tu cuenta en Del Plata Fragancias">
+    <title>Acceder | Del Plata Fragancias</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="icon" type="image/x-icon" href="../assets/img/iconoDPF.png" />
+
+</head>
+<body class="auth-page">
+
+    <!-- Auth Container -->
+    <main class="auth-main">
+        
+        <!-- Background Decoration -->
+        <div class="auth-background">
+            <div class="auth-background-circle auth-circle-1"></div>
+            <div class="auth-background-circle auth-circle-2"></div>
+            <div class="auth-background-circle auth-circle-3"></div>
+        </div>
+
+        <!-- Auth Card -->
+        <div class="auth-card">
+            
+            <!-- Logo/Brand -->
+            <div class="auth-brand">
+                <a href="../index.html" class="auth-brand-link">
+                    <h1 class="auth-brand-title">DEL PLATA</h1>
+                    <h2 class="auth-brand-subtitle">FRAGANCIAS</h2>
+                </a>
+            </div>
+
+            <!-- Tabs -->
+            <div class="auth-tabs">
+                <button class="auth-tab auth-tab-active" data-tab="login">
+                    Iniciar Sesión
+                </button>
+                <button class="auth-tab" data-tab="register">
+                    Crear Cuenta
+                </button>
+            </div>
+
+            <!-- Forms Container -->
+            <div class="auth-forms">
+
+                <!-- Login Form -->
+                <form class="auth-form auth-form-active" id="loginForm">
+                    <div class="auth-form-header">
+                        <h3 class="auth-form-title">Bienvenido de nuevo</h3>
+                        <p class="auth-form-subtitle">Inicia sesión para acceder a tu cuenta</p>
+                    </div>
+
+                    <div class="auth-form-body">
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input 
+                                type="email" 
+                                id="loginEmail" 
+                                class="form-input" 
+                                placeholder="tu@email.com"
+                                required
+                                autocomplete="email">
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                            <div class="password-input-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="loginPassword" 
+                                    class="form-input" 
+                                    placeholder="••••••••"
+                                    required
+                                    autocomplete="current-password">
+                                <button type="button" class="password-toggle" data-target="loginPassword">
+                                    <span class="password-toggle-icon">👁️</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Remember & Forgot -->
+                        <div class="auth-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="rememberMe" class="checkbox-input">
+                                <span class="checkbox-text">Recordarme</span>
+                            </label>
+                            <a href="#" class="auth-link">¿Olvidaste tu contraseña?</a>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-auth">
+                            Iniciar Sesión
+                        </button>
+
+                        <!-- Divider -->
+                        <div class="auth-divider">
+                            <span class="auth-divider-text">o continúa con</span>
+                        </div>
+
+                        <!-- Social Login -->
+                        <div class="auth-social">
+                            <button type="button" class="btn-social btn-social-google">
+                                <span class="btn-social-icon">G</span>
+                                <span class="btn-social-text">Google</span>
+                            </button>
+                            <button type="button" class="btn-social btn-social-facebook">
+                                <span class="btn-social-icon">f</span>
+                                <span class="btn-social-text">Facebook</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Switch to Register -->
+                    <div class="auth-switch">
+                        <p class="auth-switch-text">
+                            ¿No tienes cuenta? 
+                            <button type="button" class="auth-switch-link" data-switch="register">
+                                Crear una
+                            </button>
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Register Form -->
+                <form class="auth-form" id="registerForm">
+                    <div class="auth-form-header">
+                        <h3 class="auth-form-title">Crear tu cuenta</h3>
+                        <p class="auth-form-subtitle">Únete a la experiencia Del Plata</p>
+                    </div>
+
+                    <div class="auth-form-body">
+                        <!-- Name -->
+                        <div class="form-group">
+                            <label for="registerName" class="form-label">Nombre completo</label>
+                            <input 
+                                type="text" 
+                                id="registerName" 
+                                class="form-input" 
+                                placeholder="Juan Pérez"
+                                required
+                                autocomplete="name">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="registerEmail" class="form-label">Email</label>
+                            <input 
+                                type="email" 
+                                id="registerEmail" 
+                                class="form-input" 
+                                placeholder="tu@email.com"
+                                required
+                                autocomplete="email">
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="registerPassword" class="form-label">Contraseña</label>
+                            <div class="password-input-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="registerPassword" 
+                                    class="form-input" 
+                                    placeholder="Mínimo 8 caracteres"
+                                    required
+                                    autocomplete="new-password">
+                                <button type="button" class="password-toggle" data-target="registerPassword">
+                                    <span class="password-toggle-icon">👁️</span>
+                                </button>
+                            </div>
+                            <div class="password-strength" id="passwordStrength">
+                                <div class="password-strength-bar">
+                                    <div class="password-strength-fill"></div>
+                                </div>
+                                <p class="password-strength-text">Usa 8 o más caracteres con letras, números y símbolos</p>
+                            </div>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div class="form-group">
+                            <label for="registerPasswordConfirm" class="form-label">Confirmar contraseña</label>
+                            <div class="password-input-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="registerPasswordConfirm" 
+                                    class="form-input" 
+                                    placeholder="Repite tu contraseña"
+                                    required
+                                    autocomplete="new-password">
+                                <button type="button" class="password-toggle" data-target="registerPasswordConfirm">
+                                    <span class="password-toggle-icon">👁️</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Terms -->
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="acceptTerms" class="checkbox-input" required>
+                            <span class="checkbox-text">
+                                Acepto los <a href="politica-privacidad.html" class="auth-link">términos y condiciones</a>
+                            </span>
+                        </label>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-auth">
+                            Crear Cuenta
+                        </button>
+
+                        <!-- Divider -->
+                        <div class="auth-divider">
+                            <span class="auth-divider-text">o regístrate con</span>
+                        </div>
+
+                        <!-- Social Register -->
+                        <div class="auth-social">
+                            <button type="button" class="btn-social btn-social-google">
+                                <span class="btn-social-icon">G</span>
+                                <span class="btn-social-text">Google</span>
+                            </button>
+                            <button type="button" class="btn-social btn-social-facebook">
+                                <span class="btn-social-icon">f</span>
+                                <span class="btn-social-text">Facebook</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Switch to Login -->
+                    <div class="auth-switch">
+                        <p class="auth-switch-text">
+                            ¿Ya tienes cuenta? 
+                            <button type="button" class="auth-switch-link" data-switch="login">
+                                Iniciar sesión
+                            </button>
+                        </p>
+                    </div>
+                </form>
+
+            </div>
+
+            <!-- Back to Home -->
+            <div class="auth-footer">
+                <a href="../index.html" class="auth-footer-link">
+                    ← Volver al inicio
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Scripts -->
+    <script type="module" src="../js/pages/AuthPage.js"></script>
+
+</body>
+</html>

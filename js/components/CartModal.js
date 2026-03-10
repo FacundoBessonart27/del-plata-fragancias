@@ -187,7 +187,7 @@ export class CartModal {
     /**
      * Renderizar item del carrito
      */
-  renderCartItem(item) {
+ renderCartItem(item) {
     console.log('📦 Renderizando item:', item);
     
     // Obtener imagen de forma SEGURA
@@ -205,12 +205,14 @@ export class CartModal {
     const finalImagePath = this.getImagePath(imagePath);
     const itemTotal = (item.precio || 0) * (item.cantidad || 1);
     
+    console.log('🖼️ Imagen final:', finalImagePath); // DEBUG
+    
     return `
         <div class="cart-item" data-product-id="${item.id}">
             <div class="cart-item-image">
                 <img src="${finalImagePath}" 
                      alt="${item.nombre || 'Producto'}" 
-                     onerror="console.error('Error imagen:', this.src); this.src='../assets/img/productos/default.jpg'">
+                     onerror="console.error('Error imagen:', this.src); this.src='assets/img/productos/default.jpg'">
             </div>
             <div class="cart-item-info">
                 <h4 class="cart-item-name">${item.nombre || 'Producto'}</h4>
@@ -302,16 +304,13 @@ export class CartModal {
      * Obtener ruta correcta de imagen según ubicación
      */
     getImagePath(imagePath) {
-        const currentPath = window.location.pathname;
-        
-        // Si estamos en /pages/, necesitamos subir un nivel para acceder a assets
-        if (currentPath.includes('/pages/')) {
-            return `../${imagePath}`;
-        }
-        
-        // Si estamos en la raíz, usar ruta directa
-        return imagePath;
-    }
+    const currentPath = window.location.pathname;
+    const isInPages = currentPath.includes('/pages/');
+    
+    console.log('📂 Ruta actual:', currentPath, '| En pages:', isInPages, '| Imagen:', imagePath); // DEBUG
+    
+    return isInPages ? `../${imagePath}` : imagePath;
+}
 
     /**
      * Alternar visibilidad (abrir/cerrar)
