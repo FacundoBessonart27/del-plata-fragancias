@@ -2185,6 +2185,13 @@
 
 /* ===== AUTH RESPONSIVE ===== */
 @media (max-width: 640px) {
+    .forgot-desktop {
+        display: none;
+    }
+    
+    .forgot-mobile {
+        display: inline;
+    }
     .auth-page {
         padding: var(--spacing-md);
         align-items: flex-start; 
@@ -2212,10 +2219,34 @@
         align-items: flex-start;
     }
     
-    /* ← AGREGAR ESTO: */
     .auth-main {
-        margin: 0; /* En móvil no centrar */
+        margin: 0; 
     }
+    .password-input-wrapper .form-input {
+        padding-right: 50px !important;
+    }
+
+    
+    .password-toggle {
+        right: var(--spacing-sm);
+    }
+
+    
+    .auth-link {
+        font-size: var(--font-size-xs);
+        line-height: 1.4;
+    }
+
+    
+    .checkbox-text {
+        font-size: var(--font-size-xs);
+    }
+
+   
+    .auth-form-body {
+        gap: var(--spacing-md);
+    }
+    
 }
 
 
@@ -2226,7 +2257,15 @@
     }
     
     .auth-card {
-        margin-bottom: var(--spacing-3xl); 
+        margin-bottom: var(--spacing-3xl);
+    }
+
+    .auth-brand {
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .auth-form-header {
+        margin-bottom: var(--spacing-lg);
     }
 }
 @media (max-width: 480px) {

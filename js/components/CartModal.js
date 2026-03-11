@@ -304,12 +304,20 @@ export class CartModal {
      * Obtener ruta correcta de imagen según ubicación
      */
     getImagePath(imagePath) {
-    const currentPath = window.location.pathname;
-    const isInPages = currentPath.includes('/pages/');
     
-    console.log('📂 Ruta actual:', currentPath, '| En pages:', isInPages, '| Imagen:', imagePath); // DEBUG
+    if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) {
+        return imagePath;
+    }
+
+    const baseUrl = window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
     
-    return isInPages ? `../${imagePath}` : imagePath;
+
+    if (window.location.pathname.includes('/pages/')) {
+        return `../${imagePath}`;
+    }
+    
+
+    return imagePath;
 }
 
     /**
